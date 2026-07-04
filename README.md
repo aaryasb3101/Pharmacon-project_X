@@ -3,7 +3,6 @@
 
 An interpretable Drug-Drug Interaction (DDI) prediction system that integrates molecular structures with  biological pathway networks.
 
----
 
 # 1. Overview of Project Approach
 Traditional deep learning approaches for predicting polypharmacy side effects typically analyze only the parent drug structures given to a patient. PHARMACON is built to sit at the intersection of structural chemistry and systems biology by addressing a critical real-world gap: modeling both the parent drug and its primary metabolites, along with its biological context with protein interactions and pathways.
@@ -15,19 +14,20 @@ Traditional deep learning approaches for predicting polypharmacy side effects ty
 
 ---
 
-# 3. Weekly Goals & Status Tracker
+## 3. Weekly Goals & Status Tracker
 
 | Week | Target Milestone | Status |
-
-| Week 1| Learn from DL course (C1,C2,C5. understand the gnn paper. | ongoing|                 
-| Week 2 | Learn, also finallise the approach and databases | 
-| Week 3 | 
-| Week 4 | 
+| :--- | :--- | :--- |
+| **Week 1** | Learn from DL course (C1,C2,C5), understand the GNN paper. | Ongoing |
+| **Week 2** | Learn, also finalize the approach and databases. | - |
+| **Week 3** | - | - |
+| **Week 4** | - | - |
 
 ---
 
-#─── Project Notes ───
-Navigate directly to respective files of: notes of DL course, architectural strategy, and dataset curation status: 
-Section 3: Deep Learning Course Notes(./notes/DLcourse_notes.md)
-Section 4: Literature Review & Domain Theory(./notes/researchNotes_theory.md) 
-Section 5: Architecture Approach & Data Parsing Updates(./notes/architecture_and_parsing.md)
+### 4. Project Notes 
+Navigate directly to the respective files for notes on the deep learning course, architectural strategy, and dataset curation status:
+
+* **[Section 3: Deep Learning Course Notes](./notes/DLcourse_notes.md)**
+* **[Section 4: Notes from Research & Domain Theory](./notes/researchNotes_theory.md)**
+*  **[Section 5: Architectural Approach & Data Parsing Updates](./notes/architecture_and_parsing.md)**
