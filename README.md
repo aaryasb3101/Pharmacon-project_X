@@ -19,7 +19,7 @@ Traditional deep learning approaches for predicting polypharmacy side effects ty
 | Week | Target Milestone | Status |
 | :--- | :--- | :--- |
 | **Week 1** | Learn from DL course (C1,C2,C5), understand the GNN paper. | Ongoing |
-| **Week 2** | Learn, also finalize the approach and databases. | - |
+| **Week 2** | By sat(11 Jul)- find dataset compatibilty for all3, Wed: finish course2 + architecture diag | - |
 | **Week 3** | - | - |
 | **Week 4** | - | - |
 
@@ -31,3 +31,5 @@ Navigate directly to the respective files for notes on the deep learning course,
 * **[Section 3: Deep Learning Course Notes](./notes/DLcourse_notes.md)**
 * **[Section 4: Notes from Research & Domain Theory](./notes/researchNotes_theory.md)**
 *  **[Section 5: Architectural Approach & Data Parsing Updates](./notes/architecture_and_parsing.md)**
+* **[Section 6: Data Notes](./notes/data_notes.md)**
+
