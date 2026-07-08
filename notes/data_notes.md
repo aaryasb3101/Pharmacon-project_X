@@ -15,3 +15,17 @@ metabolite linking approach (possible - just a thought for now (15-20 min extra 
 1. search hmdb
 2. cross check against pharmGKB
 3. get strcuture from pubchem 
+
+dataset info:
+pubchem- 
+smiles tring feed into text transformer and rdkit - aaryas spatial graph nodes 
+
+hmdb 
+donwloads section - all metabolites 
+write a parsing script using Python's pandas or xml.etree that reads the HMDB file and builds a simple lookup dictionary matching Parent Name/CID → Metabolite SMILES.
+
+pharm gkb 
+They provide clean, open tsv (tab-separated values) down-loaders. You can download their clinical annotation datasets or "Relationships" file directly
+d types: Pharmacokinetics (PK) and Pharmacodynamics (PD).
+can also use to flag aaryas protein 
+specific genes and liver enzymes (like CYP2E1, CYP2C19, or CYP2D6) that catalyze the reaction.The Toxicity & Clearance Destinies: The diagram traces whether a metabolite safely goes to renal clearance or transforms into a highly reactive toxic byproduct (like explicitly tracking NAPQI hitting cellular proteins).
