@@ -28,3 +28,31 @@ since i am not able to access data- to create the parser i dont know if the <met
 6. Approach: 
 1. Will download full XML- get the subset with metabolite 
 2. write gcn and transformer code and then on the first 20-50 rows in csv/json of subset- iterate to make sure the code works. 
+
+NEW APPROACH thoughts-
+KEEPING METABOLITES prevents it from being a remake of decagon  
+1. a two-stage Pre-training & Fine-tuning pipeline- 30,000 pairs to pre train graph and encoders, then freeze them to have a 4000 pair mechanism to train cross attention - this prevents overfitting 
+2. cross attention is applied to all- but when we isolate the 4k pairs- AUROC or AUPRC on these.- Interpretability Evaluation script
+3. DATA SIZE: The standard TWOSIDES benchmark features roughly 46,000 total interactions. Operating at 30,000 pairs ensures your project scales alongside published deep learning work.
+4. **chemBERTa**- Ai model, understands chemistry- trained on 77 million chemical compounds. so that 30kpairs isnt overfit - 
+i. GCN and cross attention can be focused on 
+5. need to clean up to remove inorganics, biologics 
+6. **how do ik what metabolite to choose:** in my proposal- i said ill choose the primary one- not most abundant: but non drugbank:
+1. inHMDB XML-look for the field tracking "Biomarker / Concentration Type" or check the text description. programmatically select the Major Primary Metabolite
+2. primary metabolite will have very similar structure to parent as only one transformation step has happened: 
+RDKit Tanimoto Similarity- more than 0.6 
+3. matching words like "toxic", "active metabolite",- check in description 
+
+
+ Python matching loop with this exact order of operations:
+If the drug has an entry in HMDB, look at the <metabolite_associations> block.
+If multiple structures exist, pick the first one that possesses a valid SMILES string and has a molecular weight lower than the parent drug (ensuring it's a breakdown product, not a complex conjugate).
+If a drug completely lacks any mapped structural metabolites, drop the pairs associated with that drug from your 30,000 training pool entirely to prevent passing blank arrays to your cross-attention network.
+
+
+**decagon vs github- for parent drugs**
+
+1. STITCH IDs in decagon so will have to clean th eid to show only numeric part - uses exact same jcsun-00/Twosides repo. 
+2. 645 core drugs- translated already - check with author if they didnt drop any columns while filtering for themselves 
+
+

@@ -25,7 +25,17 @@ donwloads section - all metabolites
 write a parsing script using Python's pandas or xml.etree that reads the HMDB file and builds a simple lookup dictionary matching Parent Name/CID → Metabolite SMILES.
 
 pharm gkb 
-They provide clean, open tsv (tab-separated values) down-loaders. You can download their clinical annotation datasets or "Relationships" file directly
 d types: Pharmacokinetics (PK) and Pharmacodynamics (PD).
 can also use to flag aaryas protein 
-specific genes and liver enzymes (like CYP2E1, CYP2C19, or CYP2D6) that catalyze the reaction.The Toxicity & Clearance Destinies: The diagram traces whether a metabolite safely goes to renal clearance or transforms into a highly reactive toxic byproduct (like explicitly tracking NAPQI hitting cellular proteins).
+specific genes and liver enzymes that catalyze the reaction shown.
+ The diagram traces whether a metabolite safely goes to renal clearance or transforms into a highly reactive toxic byproduct (like explicitly tracking NAPQI hitting cellular proteins).
+
+ decagon- pre cleaned- but has stitch ids- clean to get only numeric part 
+ open source files - pre cleaned - have perfectly documented metabolites, 
+
+
+ **important notes/ traps**
+ 1. Different drugs have diff lengths of smiles strings- to avoid wasting gpu memory- 
+ explicitly create a src_key_padding_mask inside the PyTorch dataset loader. Pass this mask directly into the cross-attention layer so the query matrices completely ignore empty padding tokens.
+ 2. molecule can be canonical? isomeric SMILES- Natively enforce Chem.MolToSmiles(mol, isomericSmiles=False) in your data pipelines to guarantee every string across all 4 parallel text/graph branches drops to the identical canonical standard.
+ 3. metabolite - primary wont be specified like it was in drug bank. 
