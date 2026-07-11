@@ -39,3 +39,13 @@ specific genes and liver enzymes that catalyze the reaction shown.
  explicitly create a src_key_padding_mask inside the PyTorch dataset loader. Pass this mask directly into the cross-attention layer so the query matrices completely ignore empty padding tokens.
  2. molecule can be canonical? isomeric SMILES- Natively enforce Chem.MolToSmiles(mol, isomericSmiles=False) in your data pipelines to guarantee every string across all 4 parallel text/graph branches drops to the identical canonical standard.
  3. metabolite - primary wont be specified like it was in drug bank. 
+
+
+
+REPOS FOR DATA :
+jcsun-00/Twosides- USING THIS 
+yueyu1030/SumGNN
+
+used jcsun- 
+neg samples is a column in ddi file from it, 
+column contains a randomly generated control drug ID that is mathematically proven not to cause that specific side effect type when combined with. allowing us to train a highly balanced cross-entropy loss function without having to manually generate random contrastive drug pairs ourselves."

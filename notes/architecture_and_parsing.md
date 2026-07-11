@@ -33,7 +33,7 @@ NEW APPROACH thoughts-
 KEEPING METABOLITES prevents it from being a remake of decagon  
 1. a two-stage Pre-training & Fine-tuning pipeline- 30,000 pairs to pre train graph and encoders, then freeze them to have a 4000 pair mechanism to train cross attention - this prevents overfitting 
 2. cross attention is applied to all- but when we isolate the 4k pairs- AUROC or AUPRC on these.- Interpretability Evaluation script
-3. DATA SIZE: The standard TWOSIDES benchmark features roughly 46,000 total interactions. Operating at 30,000 pairs ensures your project scales alongside published deep learning work.
+3. DATA SIZE: The standard TWOSIDES benchmark features roughly 46,000 total interactions. Operating at 30,000 pairs ensures our project scales alongside published deep learning work.
 4. **chemBERTa**- Ai model, understands chemistry- trained on 77 million chemical compounds. so that 30kpairs isnt overfit - 
 i. GCN and cross attention can be focused on 
 5. need to clean up to remove inorganics, biologics 
@@ -54,5 +54,6 @@ If a drug completely lacks any mapped structural metabolites, drop the pairs ass
 
 1. STITCH IDs in decagon so will have to clean th eid to show only numeric part - uses exact same jcsun-00/Twosides repo. 
 2. 645 core drugs- translated already - check with author if they didnt drop any columns while filtering for themselves 
+
 
 
