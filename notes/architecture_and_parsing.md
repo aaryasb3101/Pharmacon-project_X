@@ -57,3 +57,16 @@ If a drug completely lacks any mapped structural metabolites, drop the pairs ass
 
 
 
+approaches as for now: 
+1. 
+we map the parent drug to a metabolite only if the TEXT description matches in hmdb- longer process and will reduce usable metabolites further.
+2. 
+this is the most doable and ig most impressive option-
+we change our pitch from “we consider both parent and metabolites”- to “ metabolite existence increases our score and proves more accurate than just parent drug models” 
+essentially we have take parent drugs as input- have a binary check- does metabolite exist or not. if exists we use it further, if not we just use parent drugs and it falls back by inputting zero vector for the “has metabolite” variable. this way we train on ALL pairs- our dataset stays large and we ahow something different from what decagon/ other papers have done. something i realised was- with this we actually have a baseline that proves that metabolites increase auroc score. we report both aurocs separately- with and without metabolites. 
+3. 
+using biotransformer- it predicts the metabolite structure- im just listing it here but its not the optimal approach
+4. 
+we drop metabolites entirely.
+
+WORK ON OPTION 2 practically 

@@ -49,3 +49,12 @@ yueyu1030/SumGNN
 used jcsun- 
 neg samples is a column in ddi file from it, 
 column contains a randomly generated control drug ID that is mathematically proven not to cause that specific side effect type when combined with. allowing us to train a highly balanced cross-entropy loss function without having to manually generate random contrastive drug pairs ourselves."
+
+1. chembert a
+2. biotransformer- predicts metabolite stru for all 
+3. include both meta and non meta parents - put up a binary 
+
+
+why DRUGBANK WOULD HAVE BEEN BETTER 
+ DrugBank's own drug pages contain a structured "Metabolites" section explicitly listing each drug's known metabolite structures (with SMILES/InChIKey) — that parent→metabolite edge is exactly what HMDB is missing in its free bulk download, because HMDB originally licensed and displayed that data from DrugBank rather than curating it independently.
+
