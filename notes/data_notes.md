@@ -58,3 +58,14 @@ column contains a randomly generated control drug ID that is mathematically prov
 why DRUGBANK WOULD HAVE BEEN BETTER 
  DrugBank's own drug pages contain a structured "Metabolites" section explicitly listing each drug's known metabolite structures (with SMILES/InChIKey) — that parent→metabolite edge is exactly what HMDB is missing in its free bulk download, because HMDB originally licensed and displayed that data from DrugBank rather than curating it independently.
 
+
+intende 
+choose the metabolite cloest to parent- choice 
+
+Lagom
+
+Per the paper's own description, expect columns roughly corresponding to: parent SMILES, metabolite SMILES, and likely some identifier/name field. Important curation details already baked in (useful to know so you don't reapply them redundantly): compounds are restricted to specific elements (C, O, N, Cl, F, S, P, Br, I), and parent-metabolite pairs are filtered by Tanimoto similarity > 0.2 (1024-bit Morgan fingerprints) to exclude spurious/unrelated pairings.
+
+
+keep in mind 
+don't wait for InChIKey matching to be perfect before you get your coverage number. Run the full pipeline once, even sloppily, get a number for % of 645 drugs matched, and only invest more time in the fuzzy-matching/spot-check refinement if that number is borderline 
