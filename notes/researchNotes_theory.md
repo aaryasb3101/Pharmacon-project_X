@@ -52,7 +52,15 @@ Here, metabolite info is baked into each drug's single vector before pairing. Th
 metabolite in cross attention - 
 
 choice b 
-This does give you the specific "metabolite atom attends to parent atom" interpretability that made Jaanya's pitch compelling (and is closer to your original "metabolite-aware cross-attention fusion" framing) — at the cost of variable-shaped computation per pair depending on which gates are open, which is more engineering work (masking, padding, or conditional branching in the batch).- more padding- 4 stream 
+- in choice a-  the metabolite info gets blended into the drug's single vector before cross-attention starts, so by the time attention runs, we cant flag exact atoms. In the choice b- gated cross-attention version, the metabolite stays as its own separate set of keys/valuesalong with the parent's keys/values in the same attention step. The gate then just zeroes out that metabolite row when the drug doesn't have one, so it contributes nothing without needing a totally different code path.
+
+practically- 
+1. For each drug instead of producing one vector- we use two sets of Key/Value vectors- one for parent and one for mwtabolite atoms
+2. stack them together into one combined K/V
+3. multiply metabolite rows by gate (0 or 1)- before attention applied, so that if ) then attention assigns no real info. 
+4. run cross attention normally- drug A's atoms over entire combined drug B table- and vice versa 
+5. the attention weights themselves can be interpretability too- we can see which weights for metabolite vs parent drug. 
+
 
 
 
