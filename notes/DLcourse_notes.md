@@ -247,3 +247,82 @@ fusion layer will have trial and eror
 **What does this have to do with the brain? (C1W4L08):**
 historical, doesnt really relate as much, stick to math and optimisation. 
 
+**Course 2:**
+**Notes**
+
+1. Train/Dev/Test split
+ Train: model learns weights here.
+ Dev- tune hyperparameters - lr, etc 
+ Test: touched only at end to report unbiased final performance 
+
+since we may fit hyperparameters to the data otherwise 
+
+split 60/20/20 or 75/15/15
+dev split should just be reliable
+
+ 2. stratify if needed so that imabalance ratio is common to all 
+
+ 3. if train and dev error are high then high bias and underfit- train low and dev high then high variance 
+ 4. for for pulsar with imbalance, plain accuracy is misleading (a model predicting "not pulsar" always could get ~91% accuracy and look
+"good"). loss or F1/recall on the minority class, not raw accuracy,
+
+High bias - bigger network, train longer, different architecture, less regularization.
+• High variance - more data, regularization (L2/dropout), simpler network.
+
+
+
+**Course5:**
+**Notes**
+
+1. **C5W3L01 Basic Models**
+- sequence data: input/output ehere data order matters
+- pretrained CNN- Alex net architecture- repressnets image as a 4096 feature vector- to feed into rnn to generate caption one word at a time. 
+-  the encoder doesn't have to be the same type of network as the decoder - different  (image, text, sequence) can be encoded and then given to a decoder.
+- connection to pharmacon: 
+chemical and biological branch- sep encoders which compress into a vector and then puts into cross attention which is the decoder . analogus to image captioning pattern. 
+
+2. **C5W3L02 Picking the most likely sentence**
+- conditional language model -estaa=imate prob of translation- condition on input - instead of generatinf text from scratch 
+- dont sample random words- not word by word- we look at entire sentence- we maximise translation.
+- why not greedy search- not miost likely word- maximise
+
+connection:
+**why arg max over final probabilty distribution-  classifier's output layer is doing the same kind of decision -picking the most likely interaction type out of ~963 classes via argmax over the softmax distribution**
+
+
+3. **C5W3L06 Bleu Score (Optional)**
+- compare generated translation to references translations(human)
+- modifed precision- clip the amount of times (max)- the owrd comes across all references (alteast one of the references)- so that it doesnt get repeated 
+- bigrams- pairs fo words checked- and so on 
+- MT output 
+- denominator is the number of bigrams/unigrams/etc possible 
+- combine the scores across - using geometric mean. 
+- BP- brevity penalty- very short translations can increase precision - if mt length> ref output. - bp=1.
+
+4. C5W3L07 Attention Model Intuition
+- standard encoder- decoder- compresses entire input into one vector - degrades for long sequences. 
+- thus we use attention: decoder gets a weighted distrubution of all encoder states at each step 
+-weights are learnt
+- connnection to pharmacon:
+**instead of just concatenating chemical-branch and biological-branch embeddings, attention lets the model learn how much each biological feature should weigh or attend to each chemical feature  per drug pair, rather than a fixed, normal combination.**
+Sets up why plain feedforward NNs don't work well here — no natural way to share features learned at one position with another, and inputs/outputs can vary in length.
+
+5. C5W3L08 Attention Model:
+- bidirectional rnn for computing features. 
+- attention weights α(t,t') — for each output timestep t, a distribution over all input timesteps t' showing how much weight to place on each input when generating the output.
+- Context vector at each decoder step = weighted sum of encoder hidden states, weighted by these α values, rather than a single fixed vector for the whole sequence.
+- **α(t,t') is computed via a small neural net (softmax over energies e(t,t')) that takes the previous decoder state and each encoder hidden state — so the weighting itself is learned, notmanual.**
+- quadratic cost: for Tx input steps and Ty output steps, you compute Tx×Ty attention weights — expensive b
+
+6. C5W3L09 SpeechRecog
+
+- 
+CTC (Connectionist Temporal Classification): allows the network to output blanks/repeated characters and collapses them, so we don't need exact alignment between input audio frames and output characters.
+- Attention-based speech models: instead of CTC, use an attention mechanism so the decoder listens to relevant parts of the audio at each output step, audio instead of text).
+- Trigger word detection like hey siri- : label each audio frame with 0/1, target = 1 iftrigger word is spoken, trained on labeled audio clips.
+
+
+
+
+Connection to Pharmacon: Your dual-branch drug encoders (chemical structure sequences like SMILES, or biological/protein sequences) are exactly the kind of ordered, variable-length data this video argues needs sequence models instead of plain feedforward nets — this is the conceptual justification for why you'd use RNN/LSTM/attention-based encoders on your per-drug inputs rather than flat MLPs.
+

@@ -69,3 +69,219 @@ Per the paper's own description, expect columns roughly corresponding to: parent
 
 keep in mind 
 don't wait for InChIKey matching to be perfect before you get your coverage number. Run the full pipeline once, even sloppily, get a number for % of 645 drugs matched, and only invest more time in the fuzzy-matching/spot-check refinement if that number is borderline 
+
+
+
+---- NEW NOTES FROM DRUGBANK XML- AVANISH----
+
+=== Full structure of first <drug> element (depth-limited to 4) ===
+
+<drug>
+  <drugbank-id>  = "DB00001"
+  <name>  = "Lepirudin"
+  <description>  = "Lepirudin is a recombinant hirudin forme..."
+  <cas-number>  = "138068-37-8"
+  <unii>  = "Y43GF64R34"
+  <state>  = "solid"
+  <groups>
+    <group>  = "approved"
+  <general-references>
+    <articles>
+      <article>
+        <ref-id>  = "A1"
+        <pubmed-id>  = "16244762"
+        <citation>  = "Smythe MA, Stephens JL, Koerber JM, Matt..."
+    <textbooks>
+    <links>
+      <link>
+        <ref-id>  = "L48"
+        <title>  = "Google books"
+        <url>  = "http://books.google.com/books?id=iadLoXo..."
+    <attachments>
+  <synthesis-reference>  = "Recombinant hirudin expressed by using y..."
+  <indication>  = "Lepirudin is indicated for anticoagulati..."
+  <pharmacodynamics>  = "Lepirudin is a recombinant hirudin that ..."
+  <mechanism-of-action>  = "Lepirudin is a direct thrombin inhibitor..."
+  <toxicity>  = "The acute toxicity of intravenous lepiru..."
+  <metabolism>  = "As a polypeptide, lepirudin is expected ..."
+  <absorption>  = "Lepirudin administered as a single intra..."
+  <half-life>  = "Lepirudin has an initial half-life of ap..."
+  <protein-binding>  = "In human plasma, the protein binding of ..."
+  <route-of-elimination>  = "Lepirudin is mostly excreted through uri..."
+  <volume-of-distribution>  = "The volume of distribution of lepirudin ..."
+  <clearance>  = "The clearance of lepirudin is proportion..."
+  <classification>
+    <description>
+    <direct-parent>  = "Peptides"
+    <kingdom>  = "Organic Compounds"
+    <superclass>  = "Organic Acids"
+    <class>  = "Carboxylic Acids and Derivatives"
+    <subclass>  = "Amino Acids, Peptides, and Analogues"
+  <salts>
+  <synonyms>
+    <synonym>  = "[Leu1, Thr2]-63-desulfohirudin"
+  <products>
+    <product>
+      <name>  = "Refludan"
+      <labeller>  = "Bayer Ag"
+      <ndc-id>
+      <ndc-product-code>  = "50419-150"
+      <dpd-id>
+      <ema-product-code>
+      <ema-ma-number>
+      <started-marketing-on>  = "1998-03-06"
+      <ended-marketing-on>  = "2013-06-30"
+      <dosage-form>  = "Powder"
+      <strength>  = "50 mg/1mL"
+      <route>  = "Intravenous"
+      <fda-application-number>  = "NDA020807"
+      <generic>  = "false"
+      <over-the-counter>  = "false"
+      <approved>  = "true"
+      <country>  = "US"
+      <source>  = "FDA NDC"
+  <international-brands>
+  <mixtures>
+  <packagers>
+    <packager>
+      <name>  = "Bayer Healthcare"
+      <url>  = "http://www.bayerhealthcare.com"
+  <manufacturers>
+    <manufacturer>  = "Bayer healthcare pharmaceuticals inc"
+  <prices>
+    <price>
+      <description>  = "Refludan 50 mg vial"
+      <cost>  = "273.19"
+      <unit>  = "vial"
+  <categories>
+    <category>
+      <category>  = "Amino Acids, Peptides, and Proteins"
+      <mesh-id>  = "D000602"
+  <affected-organisms>
+    <affected-organism>  = "Humans and other mammals"
+  <dosages>
+    <dosage>
+      <form>  = "Injection, powder, for suspension"
+      <route>  = "Intravenous"
+      <strength>  = "5000000 mg"
+  <atc-codes>
+    <atc-code>
+      <level>  = "Direct thrombin inhibitors"
+  <ahfs-codes>
+  <pdb-entries>
+  <patents>
+    <patent>
+      <number>  = "5180668"
+      <country>  = "United States"
+      <approved>  = "1993-01-19"
+      <expires>  = "2010-01-19"
+      <pediatric-extension>  = "false"
+  <food-interactions>
+    <food-interaction>  = "Avoid herbs and supplements with anticoa..."
+  <drug-interactions>
+    <drug-interaction>
+      <drugbank-id>  = "DB06605"
+      <name>  = "Apixaban"
+      <description>  = "Apixaban may increase the anticoagulant ..."
+  <sequences>
+    <sequence>  = ">DB00001 sequence
+LTYTDCTESGQNLCLCEGSNVC..."
+  <experimental-properties>
+    <property>
+      <kind>  = "Water Solubility"
+      <value>  = "Soluble"
+      <source>  = "Health Canada drug label"
+  <external-identifiers>
+    <external-identifier>
+      <resource>  = "Drugs Product Database (DPD)"
+      <identifier>  = "11916"
+  <external-links>
+    <external-link>
+      <resource>  = "RxList"
+      <url>  = "http://www.rxlist.com/cgi/generic/lepiru..."
+  <pathways>
+    <pathway>
+      <smpdb-id>  = "SMP0000278"
+      <name>  = "Lepirudin Action Pathway"
+      <category>  = "drug_action"
+      <drugs>
+        <drug>
+      <enzymes>
+        <uniprot-id>  = "P00734"
+  <reactions>
+    <reaction>
+      <sequence>  = "1"
+      <left-element>
+        <drugbank-id>  = "DB00001"
+        <name>  = "Lepirudin"
+      <right-element>
+        <drugbank-id>  = "DBMET03462"
+        <name>  = "M1 (1-64)"
+      <enzymes>
+  <snp-effects>
+  <snp-adverse-drug-reactions>
+  <targets>
+    <target>
+      <id>  = "BE0000048"
+      <name>  = "Prothrombin"
+      <organism>  = "Humans"
+      <actions>
+        <action>  = "inhibitor"
+      <references>
+        <articles>
+        <textbooks>
+        <links>
+        <attachments>
+      <known-action>  = "yes"
+      <polypeptide>
+        <name>  = "Prothrombin"
+        <general-function>  = "Thrombin, which cleaves bonds after Arg ..."
+        <specific-function>  = "calcium ion binding"
+        <gene-name>  = "F2"
+        <locus>  = "11p11.2"
+        <cellular-location>  = "Secreted, extracellular space"
+        <transmembrane-regions>
+        <signal-regions>  = "1-24"
+        <theoretical-pi>  = "5.7"
+        <molecular-weight>  = "70036.295"
+        <chromosome-location>  = "11"
+        <organism>  = "Humans"
+        <external-identifiers>
+        <synonyms>
+        <amino-acid-sequence>  = ">lcl|BSEQ0016004|Prothrombin
+MAHVRGLQLPG..."
+        <gene-sequence>  = ">lcl|BSEQ0016005|Prothrombin (F2)
+ATGGCG..."
+        <pfams>
+        <go-classifiers>
+  <enzymes>
+  <carriers>
+  <transporters>
+
+
+  - HERE METABOLITE INFO IS IN THE FORM OF A REACTION- LEFT IS PARENT, RIGHT METABOLITE 
+
+  2. PARSED TOTAL SITE: 
+  Total drugs scanned:                     17430
+  'Proper' organic drugs (has SMILES):     12313
+    ...of those, with >=1 metabolite rxn:  935
+      ...percentage with metabolites:        7.6%
+
+      3. CHECKED IF METABOLITE DATA EXISTS ANYWHERE ELSE- NO WHERE. RAN FOUR SCRIPTS. 
+      4. drugbank orginallly maybe only also contained ids only and not strcutures
+
+      --WHAT THIS MEANS FOR PROJECT:---
+      1. metabolite structures not there- only name and id, we still need to look up structures from other webiste- can check hmbd to see if ids get mapped properly. (smiles/inchikey not present so there is no actual data we can work on w this). this may reduce metabolite data more
+      can use drugbank to make flag- metabolite exists or not. 
+      2. parent drug scale goes from 645 to 12k- biologic like drugs if removed and these 12k have smiles
+      3. check how useful metabolite id data is to us 
+      4. lagom is actually not a lookup database- its a transformer based predictive model which actually trained on drugbank data itself to create its database (db+ MetXBioDB)
+      5. twosides- 943 predictive labels for side effetcts: we will have to create names/labels for each side effect (free-text mechanism sentences exist in drugbank)- manual work need to discuss if we need or not 
+
+
+      how to check metabolite ids: 
+      1. Direct ID cross-reference (best case, if it exists)
+     2.  Name-based matching-  DrugBank <reactions> gives you a metabolite name
+     3. Structural cross-check once we have a candidate match
+
+

@@ -45,3 +45,4 @@ binary cross why misleading
 epoch?
 ap_score:.3f
 mark boolean array 
+f1 recall precision 
