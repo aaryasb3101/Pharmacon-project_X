@@ -285,3 +285,47 @@ ATGGCG..."
      3. Structural cross-check once we have a candidate match
 
 
+HMDB entries do carry a direct
+DrugBank ID field.
+
+1. lagom org training dataset unavaibale as no drugbank access 
+2. try met x
+or use lagom predictive 
+or check biancas preprocesss set 
+3. mapping twosides drugs to drugbank 
+4. 
+
+mapping: 
+DrugBank scan complete: 17430 total drugs, 12313 organic (SMILES) drugs
+
+1. found that hmdb+ drugbank not mapping: hmdbs id means it is the exact drugbank drug not the metabolite - hence cant use hmdb 
+2. twosides- only two or do i also include db- that means we will predict not just properly mapped labels 
+3. lagom: the repo i sent vs what we can use now: have to map parent drug 
+4. metbiox thingy check 
+5. ran similarity on 3k drugs- high similarity 3080- "1-Methylhistidine € metabolite of 1-Methylhistidine
+* (DB04151)" - the parent and the
+* "metabolite" are the same exact compound
+
+
+1. parent drugs do we want to just keep the 645 drug set or 12k (from drugbank) - the 12k drugs wont have labels mapped to all of them so basically our model will become a side effect predictive model- whereas if we just use 645 - we have exact labels for each. again, decagon uses only 645 so lmk what we should do 
+2. transformer- do we train it now of kaggle or gpus are avaiable? 
+3. will start looking at the biological data- even if we dont include in next biweekly 
+4. are separate miniprojects expected for this biweekly?
+ok so for gnn- i went over the resource you sent - talks about it conceptually and visually well- do you have any recs for something that shows  1. molecular graph guidance like decagon,2. something that shows batching variable sized graphs/ stacking depth/multi relational gnn
+
+26 july meet:
+
+molformer 
+Nah separate mini projects are not expected now, but you r working on the datasets and aarya is working on the transformer
+look into pretrained models as last resort- 
+And yes look into how you'll be implementing biological branch and explainability thoda so that no conflicts arise in the future, next meet me mention bio branch, let's keep explainability for a later meet
+Metabolites ke case me even if you use simulated methods like lagom, it's good enough to prove a hypothesis
+It's not a bad outcome, but it's upto you depending on what you want to do here ig
+But it will become significantly harder for you
+645 drugs ka corpus is tried and true in decagon- use twosides 
+Let's go with TWOSIDES for now
+GNN graph banane me bhi easy (relatively) padega 
+Y'all will have to deal with bio branch also later
+biologically ig we may need a gate too - because we wont have all pathways
+
+look into 

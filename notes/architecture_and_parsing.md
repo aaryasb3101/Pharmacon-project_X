@@ -201,3 +201,12 @@ choose the metabolite cloest to parent- choice
 Lagom
 
 Per the paper's own description, expect columns roughly corresponding to: parent SMILES, metabolite SMILES, and likely some identifier/name field. Important curation details already baked in (useful to know so you don't reapply them redundantly): compounds are restricted to specific elements (C, O, N, Cl, F, S, P, Br, I), and parent-metabolite pairs are filtered by Tanimoto similarity > 0.2 (1024-bit Morgan fingerprints) to exclude spurious/unrelated pairings.
+
+
+
+transfomrer notes 
+custom transformer or should we 
+matrices for diff features 
+key valu ematrix- weights, vocab, get matrices from pretrained models from molformer- prev knowledge of chemistry - match the embeddingd  to the model we are using - 
+
+take smiles string- tokeniser- sep the individual atoms- takes apart c and cl - embeddings - a vector - 256 dimensions random 256 numbers for one molecule- model- trained- go through it and have 4 layerrs- multihead self attention- normalisation and feedforfroawrd- layers traianed- adjust the embeddings to store info about it- 4=cl- random initialisation changed to 2- multihead self attention- one head one feature- aromatic rings etc- cls- embeddings pull together to a parent or metabolite embedding- molecular embedding- 256 vector- so that same 
