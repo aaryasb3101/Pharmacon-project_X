@@ -328,4 +328,12 @@ GNN graph banane me bhi easy (relatively) padega
 Y'all will have to deal with bio branch also later
 biologically ig we may need a gate too - because we wont have all pathways
 
-look into 
+29 july: 
+topics:
+
+1. The lagom repo was the dataset that lagom trained on but it references DB whcih we dont have- and thus we had to resort to using the model- thus the metabolite structures are predicted and not solid data. - can check metbiox but less likelihood 
+ 2. Parent drug dataset - questions that arose and what i found out 
+a. Do i use Twosides 645 only or include all 12k from Drugbank? Twosides better- already cleaned data- better baseline as decagon uses it. If we include all 12k then our model becomes prediction based as all arent mapped in drugbank 
+3. 
+3. HMDB? - cannot use for metabolites : it was giving very high accuracie as the same molcule was mapped as metabolite and parent drug- 
+1-Methylhistidine  DB04151. HMDB's drugbank id field might just mean "this exact same chemical compound also happens to exist in DrugBank's own catalog" , not "this is a metabolite derived from that DrugBank parent drug." a match doesn't automatically mean an actual parent-drug-to-metabolite relationship.
