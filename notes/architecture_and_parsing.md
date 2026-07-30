@@ -210,3 +210,13 @@ matrices for diff features
 key valu ematrix- weights, vocab, get matrices from pretrained models from molformer- prev knowledge of chemistry - match the embeddingd  to the model we are using - 
 
 take smiles string- tokeniser- sep the individual atoms- takes apart c and cl - embeddings - a vector - 256 dimensions random 256 numbers for one molecule- model- trained- go through it and have 4 layerrs- multihead self attention- normalisation and feedforfroawrd- layers traianed- adjust the embeddings to store info about it- 4=cl- random initialisation changed to 2- multihead self attention- one head one feature- aromatic rings etc- cls- embeddings pull together to a parent or metabolite embedding- molecular embedding- 256 vector- so that same 
+
+
+1. dataset finalise 
+2. what problems during finalisation 
+3. 3 files for dataset 
+4. transformer actual implememntion: use of it in layman terms 
+5. architecture diagram at end 
+6. comparion with existing and why ours is diff- molformer touch 
+7. future plan- gnn and relation to bio branch 
+8. bio branch - ppt bifurcation 

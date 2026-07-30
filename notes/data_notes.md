@@ -337,3 +337,65 @@ a. Do i use Twosides 645 only or include all 12k from Drugbank? Twosides better-
 3. 
 3. HMDB? - cannot use for metabolites : it was giving very high accuracie as the same molcule was mapped as metabolite and parent drug- 
 1-Methylhistidine  DB04151. HMDB's drugbank id field might just mean "this exact same chemical compound also happens to exist in DrugBank's own catalog" , not "this is a metabolite derived from that DrugBank parent drug." a match doesn't automatically mean an actual parent-drug-to-metabolite relationship.
+
+
+
+What each file contains
+
+ddis_final_enriched_dataset.csv
+d1, d2, type, Neg samples, d1_drugbank_id, d2_drugbank_id, d1_drugbank_name, d2_drugbank_name
+
+Interaction labels present — type is your label column
+This is your TWOSIDES pairs, enriched with the DrugBank mapping you built earlier (this confirms your TWOSIDES→DrugBank join worked
+No SMILES here — that's fine, this file's job is interaction labels + ID cross-referencing, not structure
+
+gnn_edge_list_ready.csv
+Same columns as above, plus d1_idx, d2_idx
+
+This adds the integer node indices needed for GNN libraries (PyTorch Geometric expects edges as integer index pairs, not string IDs)
+Still no SMILES — also expected, since an edge list only describes connections between nodes, not node features
+
+gnn_node_mapping.csv
+drug_id, node_index
+
+Just the lookup table: which integer index corresponds to which drug — necessary for converting between your GNN's internal indexing and real drug identities
+
+This is the key thing to clarify first: is gnn_edge_list_ready.csv representing:
+(a) the DDI interaction graph — nodes = drugs, edges = "these two drugs interact" (which is what it looks like, given d1_idx, d2_idx per interaction pair), or
+(b) molecular graphs per drug — nodes = atoms, edges = bonds, one graph per drug
+
+Based on what you've shown me, this is clearly (a) — a drug-drug interaction graph, not a per-molecule atomic graph. This matters a lot for your answer.
+
+Why this changes things
+
+If your architecture's GCN was meant to encode molecular structure (atoms/bonds within a single drug, as you described earlier — "SMILES Transformer + GCN → parent_chem_vec"), then this gnn_edge_list_ready.csv file is a different graph entirely — the DDI relationship graph, not the per-molecule atomic graph your chemical branch needs. These serve two separate architectural purposes and shouldn't be confused with each other.
+
+What you actually need for the SMILES Transformer (and per-molecule GCN)
+
+A simple file: drug_id (or node_index), smiles — one row per unique drug, giving you the raw string to tokenize for the Transformer, and separately, RDKit converts that same SMILES into an atom/bond graph for your GCN branch at runtime (this conversion typically happens in your data-loading code, not as a pre-saved file, since atom/bond graphs are usually built on-the-fly from SMILES using RDKit + PyTorch Geometric utilities).
+
+What to do next
+Join gnn_node_mapping.csv (drug_id, node_index) with your original drugs.csv (drug_id, smiles) → produces node_index, drug_id, smiles — this is your SMILES Transformer's actual input file
+Keep gnn_edge_list_ready.csv separately — this is your DDI graph structure (likely feeding the cross-attention/interaction-level part of your architecture, or a separate DDI-graph-based branch if your design uses one, distinct from the per-molecule GCN)
+
+Want me to write the join script for step 1 now, so you have your SMILES-ready file?
+
+
+
+
+30 july owrk: 
+joined gnn_node_mapping.csv (drug_id, node_index) with drugs.csv (drug_id, smiles) and Keep gnn_edge_list_ready.csv separately
+- for transformer 
+
+- ran biobtransformer : 
+local vs repo- used local : and not using colab as sessions disconnect after 90 mins
+
+- error when i ran on 10 drugs- tried on one- worked- 60 sec for one drug so 10-14 hours for 645. 
+
+- biotransofrmer better than lagom- general chemical not pretrained on drugbank. biot is rule based- built for this task. 
+
+- how to decide which metabolite" 
+1. Iteration 1 over iteration 2+. BioTransformer runs multi-step cascades — iteration 1 = direct product of the parent, iteration 2 = metabolite-of-a-metabolite.- first pass better 
+2. phase 1 vs phase 2 - phase two irreleavnt and excretion ready- one is ixidative.
+3. structure similarity. 
+4. enzyme probabiltyscores 
