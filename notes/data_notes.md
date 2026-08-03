@@ -399,3 +399,37 @@ local vs repo- used local : and not using colab as sessions disconnect after 90 
 2. phase 1 vs phase 2 - phase two irreleavnt and excretion ready- one is ixidative.
 3. structure similarity. 
 4. enzyme probabiltyscores 
+
+
+
+biot: column names
+InChI / InChIKey – two ways of writing the metabolite's chemical structure as text; InChIKey is the short version, good for exact matching against other databases.
+SMILES – another structure format, more commonly used for feeding into models/software.
+PUBCHEM_CID – PubChem's ID for this compound, if it already exists in their database (helps check if the predicted metabolite is a known compound).
+Molecular formula & Major Isotope Mass – basic chemistry info (atoms present, exact mass).
+ALogP – predicted lipophilicity (how fat-soluble vs water-soluble the molecule is); relevant for how it behaves in the body.
+Lipinski/Insecticide/Herbicide "Violations" – drug-likeness rule checks BioTransformer runs automatically; mostly not relevant to my project, can ignore.
+Metabolite ID / cdk:Title – internal ID BioTransformer assigns to this specific metabolite.
+Reaction – plain description of what happened to create this metabolite (e.g. "Alkyl-OH-glucuronidation," "Sulfation of secondary alcohol").
+Reaction ID / Enzyme(s) – which specific enzyme(s) carried out that reaction (e.g. CYP1A2, CYP2A6).
+Biosystem – confirms this was run in "HUMAN" mode.
+Precursor ID / Precursor SMILES / Precursor InChI / Precursor InChIKey / Precursor ALogP / Precursor Mass – same info, but for the original drug this metabolite came from, so each row is self-contained (don't need to look anything up elsewhere to know parent vs. metabolite).
+
+
+3 aug 
+
+ok so : found that there are 700 rows for each file: how do we choose primary? 
+1. theres primary and secondary(met of met) 
+2. 700 rows bec it generates all possible- enzyme files, phase1 and 2, etc 
+3. we want primary mets only 
+4. ways i thought: 
+- precursor id shows that if the smiles precursor is a parent then it is parent metabolite - we get all primary metabolites 
+- then run structural similarity. 
+or 
+- see jiska precursor id hai remove it- then struct similarity 
+or 
+- try to map drugbank primary metabolite names to orignial smiles met csv- then just use that for each file . 
+or
+regrenerate files with layers=1 not 2 so that only primary is generated
+
+going with precursor, for now 
