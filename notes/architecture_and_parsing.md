@@ -157,3 +157,47 @@ take smiles string- tokeniser- sep the individual atoms- takes apart c and cl - 
 6. comparion with existing and why ours is diff- molformer touch 
 7. future plan- gnn and relation to bio branch 
 8. bio branch - ppt bifurcation 
+
+8 august 
+so basically i followed through the pipeline we decided- then realised a couple things: 
+smiles based matching was not 100% reliable, inchikey mapping wasnt enough
+what i decided
+run a scipt to get all primary metabolites (inchiket mapping to precursor)
+run a script to get only cyp based metabolites
+but what do multiple cyp metabolites mean? its just different stages/places in the molecule where the enzyme has acted. hence its not fair to just run structural similarity as all are equally imp
+what i thought would be better to do instead and check :            1. run a frequency based selection: same metabolite structure(same inchikey) independently predicted via diff enzymes: good. so we pick that metabolite. 
+for a tiebreaker : i looked into it biologically: CYP3A4 single most significant metabolizing enzyme in humans- so we can prioritise using that
+
+for tiebreak of tiebreaker- tanimoto similarity ( not just first row) thius each run we have a conatnt output 
+
+MAJOR PUSHBACK FROM BIOT NOT ALL FILES WERE GENERATED!!
+basically in bioT output we see files named to 645 - but actually only 556 files were outputted- some failed.
+Image
+thats because some of these molecules were classified as salts/inorganics 
+toh fail hogya- some of them. and some keliye there was a java flag to be incorporated
+basically ive tried modifying original sceipt and rerunning the batch - it skips all made files alr so running only on 88 - in process rn
+the ones classified as inorganics we cant do anything about - will have to leave them out
+example of an output (inorganics)
+
+
+
+BIOT - WHAT DO MULTIPLE CYP ENZYMES MEAN?
+- Different CYP enzymes can act on the same drug, at different sites: different functional groups, different parts of the ring structure- same parent drug can genuinely be metabolized in several distinct ways, by several different enzymes, each producing a different metabolite structure.
+- The same CYP enzyme can perform different reactions
+-BioTransformer explores multiple possible reaction sites systematically 
+
+what to do? 
+-  Keep all of them - treat each as a separate metabolite node/input, letting our model see the full metabolic diversity- WE WANT ONLY ONE 
+- Aggregate them - e.g., average their embeddings, though this risks losing meaningful distinctions between structurally different metabolites
+
+
+ - 8 aug 
+ran on depth 2- 2 issues- fixed 
+retrying script on 88 
+JDK_JAVA_OPTIONS instead of the rejected JAVA_TOOL_OPTIONS
+rerun timeouts?
+running side by side- ran primary - but it gave merged 
+ran file wise step 1 
+drawbacks of my appraoch?
+geenerated final dataset for 556 
+tanimoto 
