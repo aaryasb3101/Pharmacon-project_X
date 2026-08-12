@@ -1,0 +1,8 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C18H18N8O8S3/c1-25-18(22-12(28)13(29)23-25)36-3-6-5-37(33)15-9(14(30)26(15)10(6)16(31)32)21-11(27)8(24-34-2)7-4-35-17(19)20-7/h4,9,15H,3,5H2,1-2H3,(H2,19,20)(H,21,27)(H,23,29)(H,31,32)/p-2",RJHQAYDAXMUGJK-UHFFFAOYSA-L,CN1C(=NC(=O)C(=N1)[O-])SCC2=C(N3C(C(C3=O)NC(=O)C(=NOC)C4=CSC(=N4)N)S(C2)=O)C(=O)[O-],,,[C18H16N8O8S3]2-,568.025322472,-2.469500000000002,2,0,0,BTM00005,BTM00005,S-Oxidation of dialkylthioether to sulfoxide,BTMR0057,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C9
+CYP2C19
+CYP2D6
+CYP3A4",HUMAN,,CN1C(=NC(=O)C(=N1)[O-])SCC2=C(N3C(C(C3=O)NC(=O)C(=NOC)C4=CSC(=N4)N)SC2)C(=O)[O-],"InChI=1S/C18H18N8O7S3/c1-25-18(22-12(28)13(29)23-25)36-4-6-3-34-15-9(14(30)26(15)10(6)16(31)32)21-11(27)8(24-33-2)7-5-35-17(19)20-7/h5,9,15H,3-4H2,1-2H3,(H2,19,20)(H,21,27)(H,23,29)(H,31,32)/p-2",VAAUVRVFOQPIGI-UHFFFAOYSA-L,,552.0304,cyp3a4_tiebreak

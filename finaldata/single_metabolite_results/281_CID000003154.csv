@@ -1,0 +1,10 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C10H16N2O5S3/c1-6-4-8(12-2-3-13)7-5-9(20(11,16)17)18-10(7)19(6,14)15/h5-6,8,12-13H,2-4H2,1H3,(H2,11,16,17)",WWSFNKSOYHWFLC-UHFFFAOYSA-N,C(CNC1CC(S(=O)(=O)C2=C1C=C(S2)S(=O)(=O)N)C)O,,,C10H16N2O5S3,340.022134612,-0.7422999999999987,0,1,1,BTM00003,BTM00003,Hydroxylation of terminal methyl,BTMR1061,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C8
+CYP2C9
+CYP2C19
+CYP2D6
+CYP2E1
+CYP3A4",HUMAN,,CCNC1CC(S(=O)(=O)C2=C1C=C(S2)S(=O)(=O)N)C,"InChI=1S/C10H16N2O4S3/c1-3-12-8-4-6(2)18(13,14)10-7(8)5-9(17-10)19(11,15)16/h5-6,8,12H,3-4H2,1-2H3,(H2,11,15,16)",IAVUPMFITXYVAF-UHFFFAOYSA-N,,324.0272,cyp3a4_tiebreak

@@ -1,0 +1,9 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C18H25N5O4/c1-25-14-9-11-12(10-15(14)26-2)22-18(23-16(11)19)21-7-4-6-20-17(24)13-5-3-8-27-13/h9-10,13H,3-8H2,1-2H3,(H,20,24)(H3,19,21,22,23)",ONYHDOBMYOCZCB-UHFFFAOYSA-N,N(CCCNC(=O)C1CCCO1)C2=NC3=CC(=C(C=C3C(=N2)N)OC)OC,,,C18H25N5O4,375.19065428000005,1.1720000000000004,0,1,1,BTM00002,BTM00002,N-Dealkylation of mixed tertiary amine,BTMR1145,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C8
+CYP2C9
+CYP2C19
+CYP2D6
+CYP3A4",HUMAN,,CN(CCCNC(=O)C1CCCO1)C2=NC3=CC(=C(C=C3C(=N2)N)OC)OC,"InChI=1S/C19H27N5O4/c1-24(8-5-7-21-18(25)14-6-4-9-28-14)19-22-13-11-16(27-3)15(26-2)10-12(13)17(20)23-19/h10-11,14H,4-9H2,1-3H3,(H,21,25)(H2,20,22,23)",WNMJYKCGWZFFKR-UHFFFAOYSA-N,,389.2063,cyp3a4_tiebreak

@@ -1,0 +1,8 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C12H12N2O3S/c13-9-1-5-11(6-2-9)18(16,17)12-7-3-10(14-15)4-8-12/h1-8,14-15H,13H2",IYDSJDWESCGRKW-UHFFFAOYSA-N,C1=CC(=CC=C1N)S(=O)(=O)C2=CC=C(C=C2)NO,,,C12H12N2O3S,264.05686324399994,1.4320999999999997,0,1,1,BTM00005,BTM00005,N-Hydroxylation of primary arylamine,BTMR0042,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C9
+CYP2C19
+CYP2E1
+CYP3A4",HUMAN,,C1=CC(=CC=C1N)S(=O)(=O)C2=CC=C(C=C2)N,"InChI=1S/C12H12N2O2S/c13-9-1-5-11(6-2-9)17(15,16)12-7-3-10(14)4-8-12/h1-8H,13-14H2",MQJKPEGWNLWLTK-UHFFFAOYSA-N,,248.0619,cyp3a4_tiebreak

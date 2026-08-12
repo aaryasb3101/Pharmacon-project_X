@@ -1,0 +1,8 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+InChI=1S/C3H6O/c1-3(2)4/h1-2H3,CSCPPACGZOOCGX-UHFFFAOYSA-N,CC(C)=O,,,C3H6O,58.041864812,-0.24400000000000033,0,0,0,BTM00008,BTM00008,N-Deisopropylation,BTMR0051,"CYP1A2
+CYP2B6
+CYP2C8
+CYP2C9
+CYP2C19
+CYP2E1
+CYP3A4",HUMAN,,CC(C)NCC(COC1=CC=C(C=C1)CCOC)O,"InChI=1S/C15H25NO3/c1-12(2)16-10-14(17)11-19-15-6-4-13(5-7-15)8-9-18-3/h4-7,12,14,16-17H,8-11H2,1-3H3",IUBSYMUCCVWXPE-UHFFFAOYSA-N,,267.1834,cyp3a4_tiebreak

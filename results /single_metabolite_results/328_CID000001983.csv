@@ -1,0 +1,8 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C8H9NO3/c1-5(10)9-7-3-2-6(11)4-8(7)12/h2-4,11-12H,1H3,(H,9,10)",LMFGGAOMLJLKJJ-UHFFFAOYSA-N,CC(=O)NC1=C(C=C(C=C1)O)O,,,C8H9NO3,167.058243148,0.41559999999999964,0,1,1,BTM00008,BTM00008,Hydroxylation of benzene on carbon ortho to strongly electron donating group,BTMR1046,"CYP1A2
+CYP2A6
+CYP2C8
+CYP2C9
+CYP2C19
+CYP2E1
+CYP3A4",HUMAN,,CC(=O)NC1=CC=C(C=C1)O,"InChI=1S/C8H9NO2/c1-6(10)9-7-2-4-8(11)5-3-7/h2-5,11H,1H3,(H,9,10)",RZVAJINKPMORJF-UHFFFAOYSA-N,,151.0633,cyp3a4_tiebreak

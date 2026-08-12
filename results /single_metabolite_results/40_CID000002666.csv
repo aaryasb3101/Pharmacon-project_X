@@ -1,0 +1,6 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C16H17N3O5S/c1-7-6-25-15-11(14(22)19(15)12(7)16(23)24)18-13(21)10(17)8-4-2-3-5-9(8)20/h2-5,10-11,15,20H,6,17H2,1H3,(H,18,21)(H,23,24)",CUXVKLLSHPANDN-UHFFFAOYSA-N,CC1=C(N2C(C(C2=O)NC(=O)C(C3=C(C=CC=C3)O)N)SC1)C(=O)O,,,C16H17N3O5S,363.088891644,0.14489999999999914,0,1,1,BTM00005,BTM00005,O-Hydroxylation of monosubstituted benzene,BTMR1034,"CYP1A2
+CYP2C8
+CYP2C9
+CYP2C19
+CYP3A4",HUMAN,,CC1=C(N2C(C(C2=O)NC(=O)C(C3=CC=CC=C3)N)SC1)C(=O)O,"InChI=1S/C16H17N3O4S/c1-8-7-24-15-11(14(21)19(15)12(8)16(22)23)18-13(20)10(17)9-5-3-2-4-6-9/h2-6,10-11,15H,7,17H2,1H3,(H,18,20)(H,22,23)",ZAIPMKNFIOOWCQ-UHFFFAOYSA-N,,347.0939,cyp3a4_tiebreak

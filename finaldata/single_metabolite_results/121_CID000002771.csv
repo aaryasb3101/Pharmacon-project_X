@@ -1,0 +1,7 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C20H21FN2O2/c1-23(2)12-18(24)10-20(16-4-6-17(21)7-5-16)19-8-3-14(11-22)9-15(19)13-25-20/h3-9,18,24H,10,12-13H2,1-2H3",GGTFYDBFVFAGLW-UHFFFAOYSA-N,CN(C)CC(CC1(C2=C(CO1)C=C(C=C2)C#N)C3=CC=C(C=C3)F)O,,,C20H21FN2O2,340.158706132,2.6306999999999983,0,0,0,BTM00002,BTM00002,Hydroxylation of acyclic aliphatic secondary carbon,BTMR1063,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C9
+CYP2E1
+CYP3A4",HUMAN,,CN(C)CCCC1(C2=C(CO1)C=C(C=C2)C#N)C3=CC=C(C=C3)F,"InChI=1S/C20H21FN2O/c1-23(2)11-3-10-20(17-5-7-18(21)8-6-17)19-9-4-15(13-22)12-16(19)14-24-20/h4-9,12H,3,10-11,14H2,1-2H3",WSEQXVZVJXJVFP-UHFFFAOYSA-N,,324.1637,cyp3a4_tiebreak

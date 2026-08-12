@@ -1,0 +1,646 @@
+twosides_drug_id,twosides_raw_name,matched_drugbank_id,matched_drugbank_name,match_method
+CID000002173,,,,Unmatched
+CID000003345,,DB00813,Fentanyl,Salt-Stripped SMILES
+CID000005206,,DB01236,Sevoflurane,Salt-Stripped SMILES
+CID000009433,,DB01223,Aminophylline,Salt-Stripped SMILES
+CID000003929,,,,Unmatched
+CID000150610,,,,Unmatched
+CID000001302,,,,Unmatched
+CID000005064,,,,Unmatched
+CID000005267,,,,Unmatched
+CID000010631,,,,Unmatched
+CID000004601,,DB01173,Orphenadrine,Salt-Stripped SMILES
+CID000005376,,,,Unmatched
+CID000005090,,DB00533,Rofecoxib,Salt-Stripped SMILES
+CID000005556,,DB00897,Triazolam,Salt-Stripped SMILES
+CID000004946,,DB00571,Propranolol,Salt-Stripped SMILES
+CID000130881,,,,Unmatched
+CID000005391,,DB00231,Temazepam,Salt-Stripped SMILES
+CID000005584,,DB00726,Trimipramine,Salt-Stripped SMILES
+CID000002802,,DB01068,Clonazepam,Salt-Stripped SMILES
+CID005381226,,,,Unmatched
+CID000004212,,DB01204,Mitoxantrone,Salt-Stripped SMILES
+CID000060953,,,,Unmatched
+CID000000596,,,,Unmatched
+CID000005726,,,,Unmatched
+CID000002522,,,,Unmatched
+CID000003308,,DB00749,Etodolac,Salt-Stripped SMILES
+CID000003405,,,,Unmatched
+CID000060795,,DB01238,Aripiprazole,Salt-Stripped SMILES
+CID000003446,,DB00996,Gabapentin,Salt-Stripped SMILES
+CID004183806,,,,Unmatched
+CID000004107,,DB00423,Methocarbamol,Salt-Stripped SMILES
+CID000004917,,DB00433,Prochlorperazine,Salt-Stripped SMILES
+CID000003161,,,,Unmatched
+CID000071329,,DB00204,Dofetilide,Salt-Stripped SMILES
+CID000003823,,DB01026,Ketoconazole,Salt-Stripped SMILES
+CID000003911,,,,Unmatched
+CID000054454,,,,Unmatched
+CID000002156,,,,Unmatched
+CID000004411,,,,Unmatched
+CID000002907,,DB00531,Cyclophosphamide,Salt-Stripped SMILES
+CID000004192,,DB00683,Midazolam,Salt-Stripped SMILES
+CID000083786,,,,Unmatched
+CID000003348,,DB00950,Fexofenadine,Salt-Stripped SMILES
+CID000000838,,,,Unmatched
+CID000002617,,,,Unmatched
+CID000001986,,DB00819,Acetazolamide,Salt-Stripped SMILES
+CID000006691,,,,Unmatched
+CID000004920,,,,Unmatched
+CID000005478,,,,Unmatched
+CID006398525,,,,Unmatched
+CID000003937,,,,Unmatched
+CID005311048,,,,Unmatched
+CID000004158,,DB00422,Methylphenidate,Salt-Stripped SMILES
+CID000005523,,DB00193,Tramadol,Salt-Stripped SMILES
+CID000003696,,DB00458,Imipramine,Salt-Stripped SMILES
+CID000004112,,,,Unmatched
+CID000003899,,DB01097,Leflunomide,Salt-Stripped SMILES
+CID000004473,,,,Unmatched
+CID000000853,,,,Unmatched
+CID005311181,,,,Unmatched
+CID000032797,,,,Unmatched
+CID000059708,,DB11868,Etiracetam,Salt-Stripped SMILES
+CID000003826,,DB00465,Ketorolac,Salt-Stripped SMILES
+CID000003143,,,,Unmatched
+CID000004736,,DB00652,Pentazocine,Salt-Stripped SMILES
+CID000005038,,,,Unmatched
+CID000005039,,DB00863,Ranitidine,Salt-Stripped SMILES
+CID000005005,,,,Unmatched
+CID005493444,,,,Unmatched
+CID000003261,,DB01215,Estazolam,Salt-Stripped SMILES
+CID000003746,,,,Unmatched
+CID000028112,,,,Unmatched
+CID000002162,,DB00381,Amlodipine,Salt-Stripped SMILES
+CID000003386,,DB00472,Fluoxetine,Salt-Stripped SMILES
+CID000004259,,,,Unmatched
+CID000119607,,DB00580,Valdecoxib,Salt-Stripped SMILES
+CID000087177,,,,Unmatched
+CID000003957,,DB00455,Loratadine,Salt-Stripped SMILES
+CID000004509,,,,Unmatched
+CID000004595,,DB00904,Ondansetron,Salt-Stripped SMILES
+CID000104865,,DB00559,Bosentan,Salt-Stripped SMILES
+CID000002666,,,,Unmatched
+CID000003007,,DB00182,Amphetamine,Salt-Stripped SMILES
+CID000004506,,DB01595,Nitrazepam,Salt-Stripped SMILES
+CID000003559,,DB00502,Haloperidol,Salt-Stripped SMILES
+CID000004909,,DB00794,Primidone,Salt-Stripped SMILES
+CID000060831,,,,Unmatched
+CID000002520,,DB00661,Verapamil,Salt-Stripped SMILES
+CID000060852,,DB00710,Ibandronate,Salt-Stripped SMILES
+CID000060854,,DB00246,Ziprasidone,Salt-Stripped SMILES
+CID000004889,,,,Unmatched
+CID000003958,,DB00186,Lorazepam,Salt-Stripped SMILES
+CID005353980,,,,Unmatched
+CID000005505,,DB01124,Tolbutamide,Salt-Stripped SMILES
+CID000216326,,DB00480,Lenalidomide,Salt-Stripped SMILES
+CID000038904,,,,Unmatched
+CID005281007,,,,Unmatched
+CID000004485,,DB01115,Nifedipine,Salt-Stripped SMILES
+CID000004539,,DB01059,Norfloxacin,Salt-Stripped SMILES
+CID000005245,,DB00884,Risedronic acid,Salt-Stripped SMILES
+CID000176870,,DB00530,Erlotinib,Salt-Stripped SMILES
+CID000039765,,,,Unmatched
+CID000041774,,,,Unmatched
+CID000667490,,DB01033,Mercaptopurine,Salt-Stripped SMILES
+CID000004635,,,,Unmatched
+CID000065999,,DB00966,Telmisartan,Salt-Stripped SMILES
+CID000005656,,DB00285,Venlafaxine,Salt-Stripped SMILES
+CID000005650,,,,Unmatched
+CID000005651,,,,Unmatched
+CID000004510,,DB00727,Nitroglycerin,Salt-Stripped SMILES
+CID000002554,,DB00564,Carbamazepine,Salt-Stripped SMILES
+CID000005717,,DB00549,Zafirlukast,Salt-Stripped SMILES
+CID000002650,,,,Unmatched
+CID000003222,,,,Unmatched
+CID000003749,,DB01029,Irbesartan,Salt-Stripped SMILES
+CID000004201,,,,Unmatched
+CID000003440,,DB00695,Furosemide,Salt-Stripped SMILES
+CID005481350,,,,Unmatched
+CID000002909,,,,Unmatched
+CID000057469,,DB00724,Imiquimod,Salt-Stripped SMILES
+CID000003075,,,,Unmatched
+CID000027661,,,,Unmatched
+CID000005647,,,,Unmatched
+CID000123620,,,,Unmatched
+CID000000271,,DB14577,Calcium cation,Salt-Stripped SMILES
+CID000002405,,DB00612,Bisoprolol,Salt-Stripped SMILES
+CID000003016,,DB00829,Diazepam,Salt-Stripped SMILES
+CID000004189,,DB01110,Miconazole,Salt-Stripped SMILES
+CID000003750,,,,Unmatched
+CID000004666,,,,Unmatched
+CID000004173,,DB00916,Metronidazole,Salt-Stripped SMILES
+CID000005538,,,,Unmatched
+CID000004159,,,,Unmatched
+CID005311297,,,,Unmatched
+CID000001065,,,,Unmatched
+CID000002576,,DB00395,Carisoprodol,Salt-Stripped SMILES
+CID000002541,,,,Unmatched
+CID000002585,,DB01136,Carvedilol,Salt-Stripped SMILES
+CID000004543,,DB00540,Nortriptyline,Salt-Stripped SMILES
+CID000004599,,,,Unmatched
+CID000019090,,,,Unmatched
+CID000003640,,,,Unmatched
+CID000005512,,,,Unmatched
+CID000005533,,DB00656,Trazodone,Salt-Stripped SMILES
+CID000077999,,DB00412,Rosiglitazone,Salt-Stripped SMILES
+CID000002022,,DB00787,Acyclovir,Salt-Stripped SMILES
+CID000002092,,DB00346,Alfuzosin,Salt-Stripped SMILES
+CID000000206,,,,Unmatched
+CID000003793,,,,Unmatched
+CID000036339,,,,Unmatched
+CID000000450,,,,Unmatched
+CID000002678,,DB00341,Cetirizine,Salt-Stripped SMILES
+CID000004927,,DB01069,Promethazine,Salt-Stripped SMILES
+CID000002756,,,,Unmatched
+CID000002803,,DB00575,Clonidine,Salt-Stripped SMILES
+CID000005672,,,,Unmatched
+CID000060835,,,,Unmatched
+CID000005530,,DB00752,Tranylcypromine,Salt-Stripped SMILES
+CID000003657,,DB01005,Hydroxyurea,Salt-Stripped SMILES
+CID000003890,,,,Unmatched
+CID004475485,,,,Unmatched
+CID000002088,,DB00630,Alendronic acid,Salt-Stripped SMILES
+CID000156419,,,,Unmatched
+CID000004034,,DB00737,Meclizine,Salt-Stripped SMILES
+CID000004451,,,,Unmatched
+CID000002891,,,,Unmatched
+CID000060865,,,,Unmatched
+CID000004893,,DB00457,Prazosin,Salt-Stripped SMILES
+CID000005358,,DB00669,Sumatriptan,Salt-Stripped SMILES
+CID000004894,,,,Unmatched
+CID000005234,,DB09153,Sodium chloride,Salt-Stripped SMILES
+CID000002578,,DB00262,Carmustine,Salt-Stripped SMILES
+CID006447131,,,,Unmatched
+CID000002118,,DB00404,Alprazolam,Salt-Stripped SMILES
+CID000003715,,DB00328,Indomethacin,Salt-Stripped SMILES
+CID000004264,,,,Unmatched
+CID000003062,,,,Unmatched
+CID000003825,,DB01009,Ketoprofen,Salt-Stripped SMILES
+CID000004052,,,,Unmatched
+CID000002487,,,,Unmatched
+CID000216239,,DB00398,Sorafenib,Salt-Stripped SMILES
+CID000003152,,DB00843,Donepezil,Salt-Stripped SMILES
+CID000027686,,,,Unmatched
+CID000004723,,DB01230,Pemoline,Salt-Stripped SMILES
+CID000003883,,DB00448,Lansoprazole,Salt-Stripped SMILES
+CID000003157,,DB00590,Doxazosin,Salt-Stripped SMILES
+CID000003154,,,,Unmatched
+CID000000214,,,,Unmatched
+CID000003003,,,,Unmatched
+CID000003158,,DB01142,Doxepin,Salt-Stripped SMILES
+CID000003333,,DB01023,Felodipine,Salt-Stripped SMILES
+CID006398970,,,,Unmatched
+CID000003648,,,,Unmatched
+CID000000772,,,,Unmatched
+CID003081884,,,,Unmatched
+CID000005544,,,,Unmatched
+CID000003365,,DB00196,Fluconazole,Salt-Stripped SMILES
+CID000060147,,,,Unmatched
+CID000002609,,,,Unmatched
+CID000004594,,DB00338,Omeprazole,Salt-Stripped SMILES
+CID000002656,,,,Unmatched
+CID000002662,,DB00482,Celecoxib,Salt-Stripped SMILES
+CID000003661,,,,Unmatched
+CID000004419,,,,Unmatched
+CID000004679,,DB00213,Pantoprazole,Salt-Stripped SMILES
+CID000005210,,DB01105,Sibutramine,Salt-Stripped SMILES
+CID000005203,,,,Unmatched
+CID000003043,,,,Unmatched
+CID000124087,,DB00967,Desloratadine,Salt-Stripped SMILES
+CID000003516,,DB00874,Guaifenesin,Salt-Stripped SMILES
+CID000003510,,,,Unmatched
+CID000005040,,,,Unmatched
+CID000152945,,,,Unmatched
+CID000003404,,,,Unmatched
+CID000003324,,DB00426,Famciclovir,Salt-Stripped SMILES
+CID000003325,,DB00927,Famotidine,Salt-Stripped SMILES
+CID000004900,,,,Unmatched
+CID000004856,,,,Unmatched
+CID000122316,,,,Unmatched
+CID000004054,,DB01043,Memantine,Salt-Stripped SMILES
+CID000003255,,,,Unmatched
+CID000005077,,,,Unmatched
+CID000005095,,DB00268,Ropinirole,Salt-Stripped SMILES
+CID000003878,,DB00555,Lamotrigine,Salt-Stripped SMILES
+CID000004058,,DB00454,Meperidine,Salt-Stripped SMILES
+CID000002244,,DB00945,Acetylsalicylic acid,Salt-Stripped SMILES
+CID000054374,,,,Unmatched
+CID000060843,,,,Unmatched
+CID000160051,,,,Unmatched
+CID000002771,,DB00215,Citalopram,Salt-Stripped SMILES
+CID000005735,,DB01198,Zopiclone,Salt-Stripped SMILES
+CID000003279,,,,Unmatched
+CID005311039,,,,Unmatched
+CID000004253,,,,Unmatched
+CID000004497,,DB00393,Nimodipine,Salt-Stripped SMILES
+CID004659568,,,,Unmatched
+CID000005732,,DB00425,Zolpidem,Salt-Stripped SMILES
+CID000004499,,DB00401,Nisoldipine,Salt-Stripped SMILES
+CID000062924,,,,Unmatched
+CID000000453,,,,Unmatched
+CID000000159,,,,Unmatched
+CID000005035,,DB00481,Raloxifene,Salt-Stripped SMILES
+CID000163742,,,,Unmatched
+CID000003419,,,,Unmatched
+CID000443871,,,,Unmatched
+CID000002800,,DB00882,Clomifene,Salt-Stripped SMILES
+CID000002806,,,,Unmatched
+CID000005379,,DB01044,Gatifloxacin,Salt-Stripped SMILES
+CID000054688,,,,Unmatched
+CID000012536,,,,Unmatched
+CID000123606,,DB00918,Almotriptan,Salt-Stripped SMILES
+CID000004463,,DB00238,Nevirapine,Salt-Stripped SMILES
+CID000005487,,DB00697,Tizanidine,Salt-Stripped SMILES
+CID000036811,,DB00841,Dobutamine,Salt-Stripped SMILES
+CID000005734,,DB00909,Zonisamide,Salt-Stripped SMILES
+CID000003463,,DB01241,Gemfibrozil,Salt-Stripped SMILES
+CID000004583,,DB01165,Ofloxacin,Salt-Stripped SMILES
+CID000000598,,DB09110,Coenzyme M,Salt-Stripped SMILES
+CID000002284,,DB00181,Baclofen,Salt-Stripped SMILES
+CID000005029,,DB01129,Rabeprazole,Salt-Stripped SMILES
+CID000003639,,DB00999,Hydrochlorothiazide,Salt-Stripped SMILES
+CID003085017,,DB00658,Sevelamer,Salt-Stripped SMILES
+CID005281104,,,,Unmatched
+CID000004829,,DB01132,Pioglitazone,Salt-Stripped SMILES
+CID000003385,,DB00544,Fluorouracil,Salt-Stripped SMILES
+CID000060198,,,,Unmatched
+CID000005195,,,,Unmatched
+CID000003203,,,,Unmatched
+CID000003877,,,,Unmatched
+CID000003954,,,,Unmatched
+CID000002153,,DB00277,Theophylline,Salt-Stripped SMILES
+CID000077993,,,,Unmatched
+CID000002732,,DB00310,Chlorthalidone,Salt-Stripped SMILES
+CID000005155,,,,Unmatched
+CID000005152,,DB00938,Salmeterol,Salt-Stripped SMILES
+CID003468412,,,,Unmatched
+CID000005645,,,,Unmatched
+CID000071616,,,,Unmatched
+CID000074989,,,,Unmatched
+CID000003676,,DB00281,Lidocaine,Salt-Stripped SMILES
+CID000003367,,,,Unmatched
+CID000003672,,DB01050,Ibuprofen,Salt-Stripped SMILES
+CID000003734,,,,Unmatched
+CID000003736,,DB09156,Iopromide,Salt-Stripped SMILES
+CID000003730,,DB01362,Iohexol,Salt-Stripped SMILES
+CID000002726,,DB00477,Chlorpromazine,Salt-Stripped SMILES
+CID000003393,,DB00690,Flurazepam,Salt-Stripped SMILES
+CID000004999,,DB01589,Quazepam,Salt-Stripped SMILES
+CID005329102,,,,Unmatched
+CID000004547,,,,Unmatched
+CID000004691,,,,Unmatched
+CID000002471,,DB00887,Bumetanide,Salt-Stripped SMILES
+CID000003305,,DB01077,Etidronic acid,Salt-Stripped SMILES
+CID000002631,,,,Unmatched
+CID000003410,,DB00983,Formoterol,Salt-Stripped SMILES
+CID000003449,,,,Unmatched
+CID000002083,,DB01001,Albuterol,Salt-Stripped SMILES
+CID000001690,,,,Unmatched
+CID000005731,,,,Unmatched
+CID000004046,,DB00358,Mefloquine,Salt-Stripped SMILES
+CID000001972,,,,Unmatched
+CID000002171,,,,Unmatched
+CID000003403,,,,Unmatched
+CID000005746,,,,Unmatched
+CID000005978,,,,Unmatched
+CID000000444,,DB01156,Bupropion,Salt-Stripped SMILES
+CID000153941,,,,Unmatched
+CID000004075,,DB00244,Mesalazine,Salt-Stripped SMILES
+CID000003675,,DB00780,Phenelzine,Salt-Stripped SMILES
+CID000004585,,,,Unmatched
+CID000005078,,DB00953,Rizatriptan,Salt-Stripped SMILES
+CID000041693,,DB00708,Sufentanil,Salt-Stripped SMILES
+CID000041781,,DB00214,Torasemide,Salt-Stripped SMILES
+CID000003869,,DB00598,Labetalol,Salt-Stripped SMILES
+CID000005372,,,,Unmatched
+CID000003961,,DB00678,Losartan,Salt-Stripped SMILES
+CID000213039,,,,Unmatched
+CID000004991,,DB00545,Pyridostigmine,Salt-Stripped SMILES
+CID000004091,,,,Unmatched
+CID000005496,,,,Unmatched
+CID000001117,,DB14546,Sulfate ion,Salt-Stripped SMILES
+CID000005076,,,,Unmatched
+CID000003962,,,,Unmatched
+CID000003355,,,,Unmatched
+CID000002719,,DB00608,Chloroquine,Salt-Stripped SMILES
+CID000002712,,,,Unmatched
+CID000002713,,,,Unmatched
+CID000657298,,DB00550,Propylthiouracil,Salt-Stripped SMILES
+CID000091270,,,,Unmatched
+CID000004200,,,,Unmatched
+CID000005412,,,,Unmatched
+CID000042113,,DB01189,Desflurane,Salt-Stripped SMILES
+CID000003108,,DB00975,Dipyridamole,Salt-Stripped SMILES
+CID000002250,,,,Unmatched
+CID000170361,,DB01273,Varenicline,Salt-Stripped SMILES
+CID000002265,,DB00993,Azathioprine,Salt-Stripped SMILES
+CID000002801,,DB01242,Clomipramine,Salt-Stripped SMILES
+CID000034312,,DB00776,Oxcarbazepine,Salt-Stripped SMILES
+CID000072054,,,,Unmatched
+CID000002749,,DB01188,Ciclopirox,Salt-Stripped SMILES
+CID000004168,,DB01233,Metoclopramide,Salt-Stripped SMILES
+CID000002720,,DB00880,Chlorothiazide,Salt-Stripped SMILES
+CID000154059,,,,Unmatched
+CID000005394,,DB00853,Temozolomide,Salt-Stripped SMILES
+CID000004634,,DB01062,Oxybutynin,Salt-Stripped SMILES
+CID000002764,,DB00537,Ciprofloxacin,Salt-Stripped SMILES
+CID000000942,,,,Unmatched
+CID000002160,,DB00321,Amitriptyline,Salt-Stripped SMILES
+CID000004211,,DB00648,Mitotane,Salt-Stripped SMILES
+CID000004170,,DB00524,Metolazone,Salt-Stripped SMILES
+CID000004171,,DB00264,Metoprolol,Salt-Stripped SMILES
+CID000002550,,,,Unmatched
+CID000004885,,,,Unmatched
+CID000004616,,DB00842,Oxazepam,Salt-Stripped SMILES
+CID000004614,,DB00991,Oxaprozin,Salt-Stripped SMILES
+CID000003042,,DB00804,Dicyclomine,Salt-Stripped SMILES
+CID000005212,,,,Unmatched
+CID000004609,,,,Unmatched
+CID000054547,,,,Unmatched
+CID000001206,,,,Unmatched
+CID000004603,,,,Unmatched
+CID005487301,,,,Unmatched
+CID000047725,,,,Unmatched
+CID000125017,,DB06700,Desvenlafaxine,Salt-Stripped SMILES
+CID000004138,,,,Unmatched
+CID000005719,,DB00962,Zaleplon,Salt-Stripped SMILES
+CID000005514,,,,Unmatched
+CID000003394,,DB00712,Flurbiprofen,Salt-Stripped SMILES
+CID000002311,,,,Unmatched
+CID000003148,,,,Unmatched
+CID000147912,,,,Unmatched
+CID000001775,,DB00252,Phenytoin,Salt-Stripped SMILES
+CID000003767,,DB00951,Isoniazid,Salt-Stripped SMILES
+CID000002658,,,,Unmatched
+CID000000861,,,,Unmatched
+CID000002462,,,,Unmatched
+CID000125889,,,,Unmatched
+CID000104741,,,,Unmatched
+CID000056339,,DB01320,Fosphenytoin,Salt-Stripped SMILES
+CID000003032,,,,Unmatched
+CID000002187,,DB01217,Anastrozole,Salt-Stripped SMILES
+CID000002267,,DB00972,Azelastine,Salt-Stripped SMILES
+CID000001546,,,,Unmatched
+CID000002249,,DB00335,Atenolol,Salt-Stripped SMILES
+CID005311082,,,,Unmatched
+CID000003488,,DB01016,Glyburide,Salt-Stripped SMILES
+CID003002190,,,,Unmatched
+CID000002951,,,,Unmatched
+CID000004740,,DB00806,Pentoxifylline,Salt-Stripped SMILES
+CID000005253,,DB00489,Sotalol,Salt-Stripped SMILES
+CID000003249,,,,Unmatched
+CID000003690,,DB01181,Ifosfamide,Salt-Stripped SMILES
+CID000005572,,DB00376,Trihexyphenidyl,Salt-Stripped SMILES
+CID000002955,,DB00250,Dapsone,Salt-Stripped SMILES
+CID000002818,,,,Unmatched
+CID000003379,,,,Unmatched
+CID000004911,,DB01032,Probenecid,Salt-Stripped SMILES
+CID000005408,,,,Unmatched
+CID000002895,,DB00924,Cyclobenzaprine,Salt-Stripped SMILES
+CID000068740,,DB00399,Zoledronic acid,Salt-Stripped SMILES
+CID000008953,,DB15925,Ammonium bicarbonate,Salt-Stripped SMILES
+CID000051263,,DB00802,Alfentanil,Salt-Stripped SMILES
+CID000002435,,DB00484,Brimonidine,Salt-Stripped SMILES
+CID000002812,,DB00257,Clotrimazole,Salt-Stripped SMILES
+CID000002524,,,,Unmatched
+CID000003706,,,,Unmatched
+CID000060871,,DB00718,Adefovir dipivoxil,Salt-Stripped SMILES
+CID000004943,,DB00818,Propofol,Salt-Stripped SMILES
+CID000003478,,DB01067,Glipizide,Salt-Stripped SMILES
+CID000005578,,DB00440,Trimethoprim,Salt-Stripped SMILES
+CID000060815,,DB00899,Remifentanil,Salt-Stripped SMILES
+CID000005401,,DB01162,Terazosin,Salt-Stripped SMILES
+CID000003652,,DB01611,Hydroxychloroquine,Salt-Stripped SMILES
+CID000000581,,,,Unmatched
+CID000068844,,,,Unmatched
+CID005282226,,,,Unmatched
+CID000004409,,DB00461,Nabumetone,Salt-Stripped SMILES
+CID000004812,,,,Unmatched
+CID000002733,,DB00356,Chlorzoxazone,Salt-Stripped SMILES
+CID000003310,,,,Unmatched
+CID000005184,,,,Unmatched
+CID000005073,,DB00734,Risperidone,Salt-Stripped SMILES
+CID000003350,,,,Unmatched
+CID000093860,,,,Unmatched
+CID000064147,,,,Unmatched
+CID000003658,,DB00557,Hydroxyzine,Salt-Stripped SMILES
+CID006918453,,,,Unmatched
+CID005493381,,,,Unmatched
+CID000005291,,DB00619,Imatinib,Salt-Stripped SMILES
+CID000150311,,,,Unmatched
+CID000002978,,,,Unmatched
+CID000003339,,DB01039,Fenofibrate,Salt-Stripped SMILES
+CID000002476,,,,Unmatched
+CID000002308,,,,Unmatched
+CID000000143,,,,Unmatched
+CID000000937,,,,Unmatched
+CID000002786,,,,Unmatched
+CID000005402,,,,Unmatched
+CID000057537,,,,Unmatched
+CID000001071,,,,Unmatched
+CID000004513,,DB00585,Nizatidine,Salt-Stripped SMILES
+CID000005596,,,,Unmatched
+CID000016231,,,,Unmatched
+CID004479097,,,,Unmatched
+CID000054808,,,,Unmatched
+CID000000191,,,,Unmatched
+CID000002477,,DB00490,Buspirone,Salt-Stripped SMILES
+CID000003066,,,,Unmatched
+CID000003008,,,,Unmatched
+CID000060754,,DB00225,Gadodiamide,Salt-Stripped SMILES
+CID000002676,,,,Unmatched
+CID000151165,,,,Unmatched
+CID000054841,,,,Unmatched
+CID000004675,,,,Unmatched
+CID000003168,,DB00450,Droperidol,Salt-Stripped SMILES
+CID000003476,,,,Unmatched
+CID000004536,,,,Unmatched
+CID000004873,,DB00761,Potassium chloride,Salt-Stripped SMILES
+CID000004205,,DB00370,Mirtazapine,Salt-Stripped SMILES
+CID000005002,,DB01224,Quetiapine,Salt-Stripped SMILES
+CID000002474,,DB00297,Bupivacaine,Salt-Stripped SMILES
+CID000003121,,DB00313,Valproic acid,Salt-Stripped SMILES
+CID000004730,,,,Unmatched
+CID000004845,,DB01291,Pirbuterol,Salt-Stripped SMILES
+CID000003467,,,,Unmatched
+CID000000815,,,,Unmatched
+CID000003763,,DB00753,Isoflurane,Salt-Stripped SMILES
+CID000004236,,DB00745,Modafinil,Salt-Stripped SMILES
+CID005282044,,,,Unmatched
+CID000504578,,,,Unmatched
+CID005362070,,,,Unmatched
+CID000003902,,DB01006,Letrozole,Salt-Stripped SMILES
+CID000003780,,,,Unmatched
+CID000065027,,,,Unmatched
+CID005362420,,,,Unmatched
+CID000056959,,DB00243,Ranolazine,Salt-Stripped SMILES
+CID000444013,,DB00538,Gadoversetamide,Salt-Stripped SMILES
+CID000009052,,,,Unmatched
+CID000002269,,,,Unmatched
+CID000110635,,,,Unmatched
+CID000004044,,DB00784,Mefenamic acid,Salt-Stripped SMILES
+CID000005472,,DB00208,Ticlopidine,Salt-Stripped SMILES
+CID000001971,,,,Unmatched
+CID000005426,,DB01041,Thalidomide,Salt-Stripped SMILES
+CID000003454,,,,Unmatched
+CID000004449,,DB01149,Nefazodone,Salt-Stripped SMILES
+CID000072467,,,,Unmatched
+CID000005454,,,,Unmatched
+CID000003642,,,,Unmatched
+CID000001046,,DB00339,Pyrazinamide,Salt-Stripped SMILES
+CID000001983,,DB00316,Acetaminophen,Salt-Stripped SMILES
+CID000131536,,,,Unmatched
+CID000004178,,DB00379,Mexiletine,Salt-Stripped SMILES
+CID000003198,,DB01127,Econazole,Salt-Stripped SMILES
+CID000003928,,,,Unmatched
+CID000004542,,DB09389,Norgestrel,Salt-Stripped SMILES
+CID005311027,,,,Unmatched
+CID000002142,,,,Unmatched
+CID000508230,,,,Unmatched
+CID000110634,,DB00862,Vardenafil,Salt-Stripped SMILES
+CID000024486,,,,Unmatched
+CID000004674,,DB00282,Pamidronic acid,Salt-Stripped SMILES
+CID000004828,,DB00960,Pindolol,Salt-Stripped SMILES
+CID000004428,,,,Unmatched
+CID000004064,,DB00371,Meprobamate,Salt-Stripped SMILES
+CID000047320,,DB00732,Atracurium besylate,Salt-Stripped SMILES
+CID000071158,,DB00659,Acamprosate,Salt-Stripped SMILES
+CID000002949,,,,Unmatched
+CID000001978,,DB01193,Acebutolol,Salt-Stripped SMILES
+CID000000158,,,,Unmatched
+CID000005771,,,,Unmatched
+CID000003461,,,,Unmatched
+CID000004993,,DB00205,Pyrimethamine,Salt-Stripped SMILES
+CID000054786,,,,Unmatched
+CID000000564,,DB00513,Aminocaproic acid,Salt-Stripped SMILES
+CID000003724,,DB01249,Iodixanol,Salt-Stripped SMILES
+CID000176168,,DB06792,Lanthanum carbonate,Salt-Stripped SMILES
+CID000004095,,DB00333,Methadone,Salt-Stripped SMILES
+CID000004440,,DB00952,Naratriptan,Salt-Stripped SMILES
+CID000060184,,,,Unmatched
+CID000024011,,,,Unmatched
+CID000148211,,,,Unmatched
+CID000000085,,,,Unmatched
+CID000003702,,DB00808,Indapamide,Salt-Stripped SMILES
+CID000013342,,,,Unmatched
+CID000004834,,,,Unmatched
+CID000005466,,,,Unmatched
+CID000002099,,DB00969,Alosetron,Salt-Stripped SMILES
+CID000123631,,DB00317,Gefitinib,Salt-Stripped SMILES
+CID000002375,,DB01128,Bicalutamide,Salt-Stripped SMILES
+CID000003117,,DB00822,Disulfiram,Salt-Stripped SMILES
+CID000002646,,,,Unmatched
+CID000002512,,,,Unmatched
+CID000003114,,DB00280,Disopyramide,Salt-Stripped SMILES
+CID000003414,,,,Unmatched
+CID000003059,,DB00861,Diflunisal,Salt-Stripped SMILES
+CID000148192,,,,Unmatched
+CID003062316,,DB01254,Dasatinib,Salt-Stripped SMILES
+CID000002995,,DB01151,Desipramine,Salt-Stripped SMILES
+CID000005878,,,,Unmatched
+CID000002141,,DB01143,Amifostine,Salt-Stripped SMILES
+CID000005381,,DB00799,Tazarotene,Salt-Stripped SMILES
+CID000004771,,DB00191,Phentermine,Salt-Stripped SMILES
+CID000060787,,,,Unmatched
+CID000060877,,,,Unmatched
+CID000003827,,DB00920,Ketotifen,Salt-Stripped SMILES
+CID000003821,,DB01221,Ketamine,Salt-Stripped SMILES
+CID000002130,,DB00915,Amantadine,Salt-Stripped SMILES
+CID000005453,,DB04572,Thiotepa,Salt-Stripped SMILES
+CID000003373,,DB01205,Flumazenil,Salt-Stripped SMILES
+CID000003372,,DB00623,Fluphenazine,Salt-Stripped SMILES
+CID000002519,,DB00201,Caffeine,Salt-Stripped SMILES
+CID000041317,,,,Unmatched
+CID000115237,,DB01267,Paliperidone,Salt-Stripped SMILES
+CID000005352,,,,Unmatched
+CID000003040,,,,Unmatched
+CID000197712,,,,Unmatched
+CID000060164,,DB00210,Adapalene,Salt-Stripped SMILES
+CID000004748,,DB00850,Perphenazine,Salt-Stripped SMILES
+CID000004745,,,,Unmatched
+CID000002478,,DB01008,Busulfan,Salt-Stripped SMILES
+CID000003278,,DB00903,Etacrynic acid,Salt-Stripped SMILES
+CID000002622,,,,Unmatched
+CID000003741,,DB09134,Ioversol,Salt-Stripped SMILES
+CID000002610,,,,Unmatched
+CID000004819,,,,Unmatched
+CID000005593,,DB00809,Tropicamide,Salt-Stripped SMILES
+CID000003914,,,,Unmatched
+CID000003784,,DB00270,Isradipine,Salt-Stripped SMILES
+CID000014888,,,,Unmatched
+CID000002708,,DB00291,Chlorambucil,Salt-Stripped SMILES
+CID000003397,,DB00499,Flutamide,Salt-Stripped SMILES
+CID006436173,,,,Unmatched
+CID000000119,,DB02530,gamma-Aminobutyric acid,Salt-Stripped SMILES
+CID001349907,,DB00763,Methimazole,Salt-Stripped SMILES
+CID000004053,,,,Unmatched
+CID000060612,,DB11428,Medetomidine,Salt-Stripped SMILES
+CID000003964,,DB00408,Loxapine,Salt-Stripped SMILES
+CID000004425,,,,Unmatched
+CID000002274,,,,Unmatched
+CID000150310,,,,Unmatched
+CID000005525,,,,Unmatched
+CID000004727,,,,Unmatched
+CID000003384,,,,Unmatched
+CID000002973,,DB00746,Deferoxamine,Salt-Stripped SMILES
+CID000003494,,DB00986,Glycopyrronium,Salt-Stripped SMILES
+CID000002349,,,,Unmatched
+CID000002283,,,,Unmatched
+CID006435110,,,,Unmatched
+CID000005297,,,,Unmatched
+CID000005515,,,,Unmatched
+CID000048175,,,,Unmatched
+CID000002637,,,,Unmatched
+CID000027991,,,,Unmatched
+CID000002177,,,,Unmatched
+CID000060696,,,,Unmatched
+CID000004739,,,,Unmatched
+CID000077992,,,,Unmatched
+CID000002019,,,,Unmatched
+CID004659569,,DB00323,Tolcapone,Salt-Stripped SMILES
+CID000004607,,,,Unmatched
+CID000005052,,,,Unmatched
+CID000119182,,,,Unmatched
+CID000005215,,DB00359,Sulfadiazine,Salt-Stripped SMILES
+CID000005486,,,,Unmatched
+CID000145068,,DB00435,Nitric Oxide,Salt-Stripped SMILES
+CID000003637,,DB01275,Hydralazine,Salt-Stripped SMILES
+CID000072938,,,,Unmatched
+CID000003382,,,,Unmatched
+CID000004140,,,,Unmatched
+CID000004195,,DB00211,Midodrine,Salt-Stripped SMILES
+CID000002215,,,,Unmatched
+CID000000298,,,,Unmatched
+CID000444033,,,,Unmatched
+CID000082146,,DB00307,Bexarotene,Salt-Stripped SMILES
+CID000004932,,DB01182,Propafenone,Salt-Stripped SMILES
+CID000002266,,DB00548,Azelaic acid,Salt-Stripped SMILES
+CID000002369,,DB00195,Betaxolol,Salt-Stripped SMILES
+CID000002232,,,,Unmatched
+CID005473385,,,,Unmatched
+CID000003291,,DB00593,Ethosuximide,Salt-Stripped SMILES
+CID000002725,,DB01114,Chlorpheniramine,Salt-Stripped SMILES
+CID000002675,,,,Unmatched
+CID000004645,,,,Unmatched
+CID000004913,,DB01035,Procainamide,Salt-Stripped SMILES
+CID000001134,,,,Unmatched
+CID000071273,,,,Unmatched
+CID000003562,,DB01159,Halothane,Salt-Stripped SMILES
+CID000002551,,DB00411,Carbamoylcholine,Salt-Stripped SMILES
+CID000002727,,DB00672,Chlorpropamide,Salt-Stripped SMILES
+CID000002673,,,,Unmatched
+CID000002370,,DB01019,Bethanechol,Salt-Stripped SMILES
+CID000039860,,,,Unmatched
+CID000005721,,,,Unmatched
+CID000012620,,DB00632,Docosanol,Salt-Stripped SMILES
+CID000040976,,,,Unmatched
+CID000005070,,DB00740,Riluzole,Salt-Stripped SMILES
+CID000051634,,,,Unmatched
+CID000003381,,,,Unmatched
+CID000002170,,DB00543,Amoxapine,Salt-Stripped SMILES
+CID003086258,,,,Unmatched
+CID009571074,,,,Unmatched
+CID000004011,,DB00934,Maprotiline,Salt-Stripped SMILES
+CID000002182,,,,Unmatched
+CID000005482,,DB01007,Tioconazole,Salt-Stripped SMILES

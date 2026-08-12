@@ -1,0 +1,10 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C17H19ClN2OS/c1-19(2)8-5-9-20-13-6-3-4-7-16(13)22-17-11-15(21)12(18)10-14(17)20/h3-4,6-7,10-11,21H,5,8-9H2,1-2H3",SOUCXKDIHOVGPW-UHFFFAOYSA-N,CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C(=C3)O)Cl,,,C17H19ClN2OS,334.0906619080001,4.472499999999999,0,0,0,BTM00008,BTM00008,Aromatic hydroxylation of fused benzene ring,BTMR1030,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C8
+CYP2C9
+CYP2C19
+CYP2D6
+CYP2E1
+CYP3A4",HUMAN,,CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C=C3)Cl,"InChI=1S/C17H19ClN2S/c1-19(2)10-5-11-20-14-6-3-4-7-16(14)21-17-9-8-13(18)12-15(17)20/h3-4,6-9,12H,5,10-11H2,1-2H3",ZPEIMTDSQAKGNT-UHFFFAOYSA-N,,318.0957,consensus_count

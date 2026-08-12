@@ -1,0 +1,9 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",WGCNASOHLSPBMP-UHFFFAOYSA-N,C(CO)=O,,,C2H4O2,60.021129368,-0.6410999999999999,0,0,0,BTM00010,BTM00010,N-Dealkylation of tertiary carboxamide,BTMR1139,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C8
+CYP2C9
+CYP2C19
+CYP2D6
+CYP3A4",HUMAN,,C(CO)N(C1=C(C(=C(C(=C1I)C(=O)NCC(CO)O)I)C(=O)NCC(CO)O)I)C(=O)CO,"InChI=1S/C18H24I3N3O9/c19-13-11(17(32)22-3-8(29)5-26)14(20)16(24(1-2-25)10(31)7-28)15(21)12(13)18(33)23-4-9(30)6-27/h8-9,25-30H,1-7H2,(H,22,32)(H,23,33)",AMDBBAQNWSUWGN-UHFFFAOYSA-N,,806.8646,cyp3a4_tiebreak

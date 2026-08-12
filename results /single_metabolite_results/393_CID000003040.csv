@@ -1,0 +1,10 @@
+InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
+"InChI=1S/C19H17Cl2N3O6S/c1-19(2)14(18(28)29)24-16(27)13(17(24)31-19)22-15(26)11-9(6-25)30-23-12(11)10-7(20)4-3-5-8(10)21/h3-5,13-14,17,25H,6H2,1-2H3,(H,22,26)(H,28,29)/p-1",BKFXQQUYRJTASJ-UHFFFAOYSA-M,C(C1=C(C(=NO1)C2=C(C=CC=C2Cl)Cl)C(=O)NC3C4N(C3=O)C(C(S4)(C)C)C(=O)[O-])O,,,[C19H16Cl2N3O6S]-,484.013686592,2.0162000000000004,0,0,0,BTM00003,BTM00003,Aliphatic hydroxylation of methyl carbon adjacent to aromatic ring,BTMR1058,"CYP1A2
+CYP2A6
+CYP2B6
+CYP2C8
+CYP2C9
+CYP2C19
+CYP2D6
+CYP2E1
+CYP3A4",HUMAN,,CC1=C(C(=NO1)C2=C(C=CC=C2Cl)Cl)C(=O)NC3C4N(C3=O)C(C(S4)(C)C)C(=O)[O-],"InChI=1S/C19H17Cl2N3O5S/c1-7-10(12(23-29-7)11-8(20)5-4-6-9(11)21)15(25)22-13-16(26)24-14(18(27)28)19(2,3)30-17(13)24/h4-6,13-14,17H,1-3H3,(H,22,25)(H,27,28)/p-1",YFAGHNZHGGCZAX-UHFFFAOYSA-M,,468.0187,cyp3a4_tiebreak
