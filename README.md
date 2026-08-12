@@ -32,4 +32,6 @@ Navigate directly to the respective files for notes on the deep learning course,
 * **[Section 4: Notes from Research & Domain Theory](./notes/researchNotes_theory.md)**
 *  **[Section 5: Architectural Approach & Data Parsing Updates](./notes/architecture_and_parsing.md)**
 * **[Section 6: Data Notes](./notes/data_notes.md)**
+* **[Section 7: Gnn Notes](./notes/notes_gnnCode.md)**
+* **[Section 8: Research Paper Notes](./notes/research_paper.md)**
 
