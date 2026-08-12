@@ -82,9 +82,9 @@ v. A drug having an HMDB entry doesn't mean the documented TWOSIDES interaction 
 
 
 
-vii. Where exactly the gate acts — this is the one design choice to get right. Two options:
+vii. Where exactly the gate acts: Two options:
 
-(a) Additive/concatenation gating: drug_repr = parent_vec + gate * metab_contribution, where metab_contribution comes from a small learned projection of metab_vec. When gate=0, this is mathematically identical to a parent-only model for that drug. Clean, easy to ablate, easy to explain.- simple and more interpretable. 
+(a) Additive/concatenation gating: drug_repr = parent_vec + gate * metab_contribution, where metab_contribution comes from a small learned projection of metab_vec. When gate=0,mathematically identical to a parent-only model for that drug.
 
 (b) Gated cross-attention: metabolite vector participates as an extra key/value in the cross-attention fusion between Drug A and Drug B, but the attention weights into it are forced to zero (or the metab K/V rows are masked out) when gate=0.- ASK THIS 
 
@@ -92,8 +92,7 @@ VIII. eight sharing is mandatory, not optional. Use the same SMILES transformer 
 
 
 **constraints:**
-HMDB structures may not match the metabolite that's actually pharmacologically active. HMDB is curated from a metabolomics angle — you may get a metabolite, not necessarily the primary hepatic one Jaanya was targeting (like NAPQI specifically). Spend part of week 1 manually checking 10-15 well-known drugs (paracetamol, warfarin, etc.) against what HMDB actually returns before committing to it as your source. If it's noisy, consider supplementing with a small hand-curated list of major CYP450 metabolites for known-dangerous drugs, at least for your qualitative case-study section.
-
+HMDB structures may not match the metabolite that's actually pharmacologically active. HMDB is curated from a metabolomics angle - we may get a metabolite, not necessarily the primary hepatic one I want (like NAPQI ). 
 - if not using hmdb- propose biotransformer -
 
 
@@ -102,7 +101,7 @@ metabolite in cross attention -
 choice b 
 
 choice a 
-Here, metabolite info is taken into each drug's single vector before pairing. There is no separate metabolite-to-metabolite attention map — it's implicitly mixed in. Simple, cheap, but you lose the ability to specifically say "the model attended atom X in Metabolite A to atom Y in Parent B."
+Here, metabolite info is taken into each drug's single vector before pairing. There is no separate metabolite-to-metabolite attention map - it's  mixed in. Simple, cheap, lose the ability to specifically say "the model attended atom X in Metabolite A to atom Y in Parent B."
 
 
 
@@ -114,7 +113,7 @@ design a
 
 Design (b) is the "keep metabolite identity separate all the way through" version 
 Architecture
-Instead of fusing metabolite info into a single per-drug vector before pairing, you keep four separate representations per pair (when available) and run cross-attention between specific combinations of them:
+Instead of fusing metabolite info into a single per-drug vector before pairing, we keep four separate representations per pair (when available) and run cross-attention between specific combinations of them:
 
 
 
@@ -132,12 +131,14 @@ The Decagon-standard 645-drug/63,473-pair set - actually a filtered subset of th
 why use this approach 
 
 If we go back to "only train on metabolite-complete pairs," and separately (or not at all) compare to a parent-only model, we're comparing two different models - possibly different training data volumes, different regularization behavior, different convergence - not the same model with one feature switched on/off. Any AUROC difference you find could be explained by a dozen things other than metabolite information itself.
-intende 
+
+intende ???
 choose the metabolite cloest to parent- choice 
 
 Lagom
 
-Per the paper's own description, expect columns roughly corresponding to: parent SMILES, metabolite SMILES, and likely some identifier/name field. Important curation details already baked in (useful to know so you don't reapply them redundantly): compounds are restricted to specific elements (C, O, N, Cl, F, S, P, Br, I), and parent-metabolite pairs are filtered by Tanimoto similarity > 0.2 (1024-bit Morgan fingerprints) to exclude spurious/unrelated pairings.
+ columns roughly corresponding to: parent SMILES, metabolite SMILES, and likely some identifier/name field.
+ are restricted to specific elements (C, O, N, Cl, F, S, P, Br, I), and parent-metabolite pairs are filtered by Tanimoto similarity > 0.2 (1024-bit Morgan fingerprints) to exclude spurious/unrelated pairings.
 
 
 
