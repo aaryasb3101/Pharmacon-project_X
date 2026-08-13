@@ -1,6 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C17H17NO3/c1-18-12-7-10-5-6-13(19)17(21)16(10)11-4-2-3-9(15(11)12)8-14(18)20/h2-6,12,14,19-21H,7-8H2,1H3",QHNWJTHIFYYSAR-UHFFFAOYSA-N,CN1C(CC2=C3C1CC4=C(C3=CC=C2)C(=C(C=C4)O)O)O,,,C17H17NO3,283.120843404,2.4668,0,1,1,BTM00010,BTM00010,Hydroxylation of heteroalicyclic secondary carbon,BTMR1070,"CYP1A2
-CYP2A6
-CYP2C9
-CYP2D6
-CYP3A4",HUMAN,,CN1CCC2=C3C1CC4=C(C3=CC=C2)C(=C(C=C4)O)O,"InChI=1S/C17H17NO2/c1-18-8-7-10-3-2-4-12-15(10)13(18)9-11-5-6-14(19)17(20)16(11)12/h2-6,13,19-20H,7-9H2,1H3",VMWNQDUVQKEIOC-UHFFFAOYSA-N,,267.1259,consensus_count

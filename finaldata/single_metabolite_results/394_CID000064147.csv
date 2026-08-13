@@ -1,4 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C14H20N6O5/c1-7(2)9(15)13(23)24-4-8(3-21)25-6-20-5-17-10-11(20)18-14(16)19-12(10)22/h3,5,7-9H,4,6,15H2,1-2H3,(H3,16,18,19,22)",WIRJMMXQLUVLON-UHFFFAOYSA-N,CC(C)C(C(=O)OCC(C=O)OCN1C=NC2=C1NC(=NC2=O)N)N,,,C14H20N6O5,352.14951773999996,-0.7620999999999984,0,1,1,BTM00001,BTM00001,Oxidation of primary alcohol to aldehyde,BTMR0105,"CYP1A2
-CYP2E1
-CYP3A4",HUMAN,,CC(C)C(C(=O)OCC(CO)OCN1C=NC2=C1NC(=NC2=O)N)N,"InChI=1S/C14H22N6O5/c1-7(2)9(15)13(23)24-4-8(3-21)25-6-20-5-17-10-11(20)18-14(16)19-12(10)22/h5,7-9,21H,3-4,6,15H2,1-2H3,(H3,16,18,19,22)",WPVFJKSGQUFQAP-UHFFFAOYSA-N,,354.1651,cyp3a4_tiebreak

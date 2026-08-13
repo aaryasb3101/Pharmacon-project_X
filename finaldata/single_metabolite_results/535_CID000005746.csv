@@ -1,4 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C15H18N4O6/c1-5-9(16)12(21)8-6(4-25-14(17)22)15(24-2)13-7(18-13)3-19(15,23)10(8)11(5)20/h6-7,13,18H,3-4,16H2,1-2H3,(H2,17,22)",JIOGRIITCBQMNJ-UHFFFAOYSA-N,CC1=C(C(=O)C2=C(C1=O)[N+]3(CC4C(C3(C2COC(=O)N)OC)N4)[O-])N,,,C15H18N4O6,350.122634296,-2.2319000000000004,0,1,1,BTM00003,BTM00003,N-Oxidation of aliphatic tertiary amine,BTMR1100,"CYP1A2
-CYP2D6
-CYP3A4",HUMAN,,CC1=C(C(=O)C2=C(C1=O)N3CC4C(C3(C2COC(=O)N)OC)N4)N,"InChI=1S/C15H18N4O5/c1-5-9(16)12(21)8-6(4-24-14(17)22)15(23-2)13-7(18-13)3-19(15)10(8)11(5)20/h6-7,13,18H,3-4,16H2,1-2H3,(H2,17,22)",NWIBSHFKIJFRCO-UHFFFAOYSA-N,,334.1277,cyp3a4_tiebreak

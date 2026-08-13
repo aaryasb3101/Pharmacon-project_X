@@ -1,6 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C11H19N3O5S3/c1-2-13-9-7-14(4-3-5-15)22(18,19)11-8(9)6-10(20-11)21(12,16)17/h6,9,13,15H,2-5,7H2,1H3,(H2,12,16,17)",WQSYAXSFXFVBTJ-UHFFFAOYSA-N,CCNC1CN(S(=O)(=O)C2=C1C=C(S2)S(=O)(=O)N)CCCO,,,C11H19N3O5S3,369.048683708,-1.1799999999999988,0,1,1,BTM00002,BTM00002,O-Dealkylation of dialkylether,BTMR1129,"CYP1A2
-CYP2C9
-CYP2C19
-CYP2D6
-CYP3A4",HUMAN,,CCNC1CN(S(=O)(=O)C2=C1C=C(S2)S(=O)(=O)N)CCCOC,"InChI=1S/C12H21N3O5S3/c1-3-14-10-8-15(5-4-6-20-2)23(18,19)12-9(10)7-11(21-12)22(13,16)17/h7,10,14H,3-6,8H2,1-2H3,(H2,13,16,17)",HCRKCZRJWPKOAR-UHFFFAOYSA-N,,383.0643,cyp3a4_tiebreak

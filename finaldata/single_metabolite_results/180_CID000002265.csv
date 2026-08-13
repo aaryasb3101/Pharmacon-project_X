@@ -1,5 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C9H7N7O3S/c1-15-4-14-7(16(17)18)9(15)20(19)8-5-6(11-2-10-5)12-3-13-8/h2-4H,1H3,(H,10,11,12,13)",ZSVNLWIHLIBCMO-UHFFFAOYSA-N,CN1C=NC(=C1S(C2=NC=NC3=C2NC=N3)=O)[N+](=O)[O-],,,C9H7N7O3S,293.033108084,-0.0407999999999995,0,0,0,BTM00003,BTM00003,S-Oxidation of diarylthioether to sulfoxide,BTMR0059,"CYP1A2
-CYP2B6
-CYP2D6
-CYP3A4",HUMAN,,CN1C=NC(=C1SC2=NC=NC3=C2NC=N3)[N+](=O)[O-],"InChI=1S/C9H7N7O2S/c1-15-4-14-7(16(17)18)9(15)19-8-5-6(11-2-10-5)12-3-13-8/h2-4H,1H3,(H,10,11,12,13)",LMEKQMALGUDUQG-UHFFFAOYSA-N,,277.0381,single_candidate

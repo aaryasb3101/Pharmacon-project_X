@@ -1,6 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C16H16ClNO3S/c1-21-15(19)16(20,12-4-2-3-5-13(12)17)18-8-6-14-11(10-18)7-9-22-14/h2-5,7,9,20H,6,8,10H2,1H3",IDEPIUOWRRKOHA-UHFFFAOYSA-N,COC(=O)C(C1=CC=CC=C1Cl)(N2CCC3=C(C2)C=CS3)O,,,C16H16ClNO3S,337.05394205199997,3.452499999999999,0,0,0,BTM00003,BTM00003,Hydroxylation of non-terminal aliphatic carbon adjacent to aromatic ring,BTMR1077,"CYP1A2
-CYP2C8
-CYP2C9
-CYP2D6
-CYP3A4",HUMAN,,COC(=O)C(C1=CC=CC=C1Cl)N2CCC3=C(C2)C=CS3,"InChI=1S/C16H16ClNO2S/c1-20-16(19)15(12-4-2-3-5-13(12)17)18-8-6-14-11(10-18)7-9-21-14/h2-5,7,9,15H,6,8,10H2,1H3",GKTWGGQPFAXNFI-UHFFFAOYSA-N,,321.0590,cyp3a4_tiebreak

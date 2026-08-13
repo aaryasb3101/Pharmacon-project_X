@@ -1,7 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C7H15Cl2N2O3P/c8-2-4-10-15(13)11(5-3-9)7(12)1-6-14-15/h7,12H,1-6H2,(H,10,13)",JHUJMHKRHQPBRG-UHFFFAOYSA-N,C1C(N(P(=O)(OC1)NCCCl)CCCl)O,,,C7H15Cl2N2O3P,276.01973433,-0.0020999999999985752,0,0,0,BTM00003,BTM00003,4-Alkyl hydroxylation of oxazaphosphorine,BTMR1052,"CYP2A6
-CYP2B6
-CYP2C8
-CYP2C9
-CYP2C19
-CYP3A4",HUMAN,,C1CN(P(=O)(OC1)NCCCl)CCCl,"InChI=1S/C7H15Cl2N2O2P/c8-2-4-10-14(12)11(6-3-9)5-1-7-13-14/h1-7H2,(H,10,12)",HOMGKSMUEGBAAB-UHFFFAOYSA-N,,260.0248,cyp3a4_tiebreak

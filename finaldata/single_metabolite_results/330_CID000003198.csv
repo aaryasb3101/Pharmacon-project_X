@@ -1,4 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C18H15Cl3N2O2/c19-13-3-1-12(2-4-13)10-25-18(9-23-6-5-22-11-23)14-7-17(24)16(21)8-15(14)20/h1-8,11,18,24H,9-10H2",DXDVUTWLWVDFQM-UHFFFAOYSA-N,C1=CC(=CC=C1COC(CN2C=CN=C2)C3=C(C=C(C(=C3)O)Cl)Cl)Cl,,,C18H15Cl3N2O2,396.01991076,4.713699999999999,1,0,0,BTM00003,BTM00003,Hydroxylation of aromatic carbon para to halide group,BTMR1041,"CYP1A2
-CYP2E1
-CYP3A4",HUMAN,,C1=CC(=CC=C1COC(CN2C=CN=C2)C3=C(C=C(C=C3)Cl)Cl)Cl,"InChI=1S/C18H15Cl3N2O/c19-14-3-1-13(2-4-14)11-24-18(10-23-8-7-22-12-23)16-6-5-15(20)9-17(16)21/h1-9,12,18H,10-11H2",LEZWWPYKPKIXLL-UHFFFAOYSA-N,,380.0249,consensus_count

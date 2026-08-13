@@ -1,6 +1,0 @@
-InChI,InChIKey,SMILES,Synonyms,PUBCHEM_CID,Molecular formula,Major Isotope Mass,ALogP,Lipinski_Violations,Insecticide_Likeness_Violations,Post_Em_Herbicide_Likeness_Violations,Metabolite ID,cdk:Title,Reaction,Reaction ID,Enzyme(s),Biosystem,Precursor ID,Precursor SMILES,Precursor InChI,Precursor InChIKey,Precursor ALogP,Precursor Major Isotope Mass,selection_method
-"InChI=1S/C18H19N3O5/c19-9-1-2-10(21-6-5-20-7-8-22)14-13(9)17(25)15-11(23)3-4-12(24)16(15)18(14)26/h1-4,20-24H,5-8,19H2",NBSLQRRHRCDIHJ-UHFFFAOYSA-N,C1=CC(=C2C(=C1NCCNCCO)C(=O)C3=C(C=CC(=C3C2=O)O)O)N,,,C18H19N3O5,357.132470708,0.3990999999999996,1,1,1,BTM00009,BTM00009,N-Dealkylation of secondary arylalkylamine,BTMR1141,"CYP1A2
-CYP2C19
-CYP2D6
-CYP2E1
-CYP3A4",HUMAN,,C1=CC(=C2C(=C1NCCNCCO)C(=O)C3=C(C=CC(=C3C2=O)O)O)NCCNCCO,"InChI=1S/C22H28N4O6/c27-11-9-23-5-7-25-13-1-2-14(26-8-6-24-10-12-28)18-17(13)21(31)19-15(29)3-4-16(30)20(19)22(18)32/h1-4,23-30H,5-12H2",KKZJGLLVHKMTCM-UHFFFAOYSA-N,,444.2008,cyp3a4_tiebreak
