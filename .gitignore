@@ -3,3 +3,21 @@ pulsar-project/venv/
 __pycache__/
 venv/
 .DS_Store
+final datasets/
+finaldata/
+hmdb download/
+drugbank_download/
+twosides data/
+LAGOM/
+Pharmacon-project_X/
+final datasets/
+finaldata/
+hmdb download/
+drugbank_download/
+twosides data/
+LAGOM/
+Pharmacon-project_X/
+final datasets /
+hmdb download /
+twosides data /
+other py /
