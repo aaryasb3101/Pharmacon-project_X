@@ -1,41 +1,5 @@
-"""
-Pharmacon biological branch -- heterogeneous graph encoder.
-
-Node types (4, each fully independent -- metabolite info is NEVER folded
-into the drug node's features anywhere in this graph):
-    - drug
-    - metabolite
-    - protein
-    - pathway
-
-Edge types:
-    - ('drug', 'ddi', 'drug')                  -- ~963 relation types, RGCNConv + basis decomposition
-    - ('drug', 'targets', 'protein')            -- drug-protein interactions (binary)
-    - ('protein', 'interacts', 'protein')        -- protein-protein interactions (binary)
-    - ('protein', 'in', 'pathway')               -- pathway membership (binary)
-    - ('drug', 'produces', 'metabolite')         -- which metabolite belongs to which parent drug
-    - ('metabolite', 'targets', 'protein')       -- 222 metabolite-protein interactions (binary)
-
-Confirmed design decisions (mentor-approved):
-    - metabolite and pathway do NOT need 3+ edge types each -- the "each
-      node type needs >=3 edges" rule does not strictly apply
-    - all non-DDI relations are binary (exists / doesn't) -- no per-relation
-      weighting needed there
-    - SAGEConv for all binary-relation edges (chosen over GCNConv for its
-      separate self/neighbor transform, chosen over GATConv for simplicity
-      given time constraints -- GATConv is a reasonable future upgrade if a
-      given relation shows meaningful within-relation neighbor variation)
-    - HeteroConv aggregation = sum
-    - 2 layers
-    - num_bases < num_relations for RGCNConv (exact value still open/tunable,
-      defaulted to 30 here)
-    - no special handling for the 222 metabolite-protein edges specifically
-    - no interaction-severity weighting (explicitly out of scope for now --
-      no severity data currently available)
-
-This file defines ONLY the encoder -- gating, cross-attention, and the MLP
-classifier are separate, later work.
-"""
+# hetero gnn encoder for the bio branch - drug/metabolite/protein/pathway nodes
+# ddi edges use rgcn (too many rel types for normal conv), everything else uses sage
 
 import torch
 import torch.nn as nn
@@ -44,25 +8,7 @@ from torch_geometric.nn import RGCNConv, SAGEConv, HeteroConv
 
 
 class PharmaconHeteroEncoder(nn.Module):
-    """
-    Two-layer heterogeneous encoder producing final embeddings for every
-    node (drug, metabolite, protein, pathway) in the graph.
-
-    Args:
-        in_channels_dict: e.g. {'drug': 768, 'metabolite': 768, 'protein': 256, 'pathway': 64}
-        hidden_channels: dimensionality used for the intermediate layer
-        out_channels: dimensionality of the FINAL node embeddings (feeds into
-                      gating/cross-attention later -- not built here)
-        num_ddi_relations: number of distinct drug-drug interaction types (~963)
-        num_bases: basis-decomposition parameter for the drug-drug RGCNConv layer.
-                   Must be < num_ddi_relations. Keeps parameter count tractable --
-                   without it, RGCNConv needs a full d x d matrix PER relation,
-                   infeasible at ~963 relations. This is the direct analogue of
-                   Decagon's "effective sharing of model parameters across edge
-                   types" (paper Section 4.1). Exact value still open/tunable --
-                   defaulted to 30, flagged as unresolved with mentor.
-    """
-
+    # 2 layer encoder, outputs one embedding per node (drug/met/protein/pathway)
     def __init__(
         self,
         in_channels_dict: dict,
@@ -73,26 +19,27 @@ class PharmaconHeteroEncoder(nn.Module):
     ):
         super().__init__()
 
+        # if num_bases >= num_relations, basis decomp does nothing, no point using rgcn then
         assert num_bases < num_ddi_relations, \
             "num_bases must be less than num_ddi_relations (mentor-confirmed constraint)"
 
         self.in_channels_dict = in_channels_dict
         self.num_ddi_relations = num_ddi_relations
 
-        # ---- Layer 1 ----
+        # layer 1 - one conv per edge type, heteroconv runs them all + sums per node
         self.conv1 = HeteroConv({
             ('drug', 'ddi', 'drug'): RGCNConv(
                 in_channels_dict['drug'],
                 hidden_channels,
                 num_relations=num_ddi_relations,
-                num_bases=num_bases,
+                num_bases=num_bases,  # shared weight basis, keeps param count sane at ~963 rels
             ),
             ('drug', 'targets', 'protein'): SAGEConv(
-                (in_channels_dict['drug'], in_channels_dict['protein']),
+                (in_channels_dict['drug'], in_channels_dict['protein']),  # tuple bc bipartite, diff dims each side
                 hidden_channels,
             ),
             ('protein', 'interacts', 'protein'): SAGEConv(
-                in_channels_dict['protein'],
+                in_channels_dict['protein'],  # same node type both sides, single dim is fine
                 hidden_channels,
             ),
             ('protein', 'in', 'pathway'): SAGEConv(
@@ -107,9 +54,9 @@ class PharmaconHeteroEncoder(nn.Module):
                 (in_channels_dict['metabolite'], in_channels_dict['protein']),
                 hidden_channels,
             ),
-        }, aggr='sum')
+        }, aggr='sum')  # if a node gets msgs from multiple rel types, just add them up
 
-        # ---- Layer 2 ----
+        # layer 2 - same idea, but now everything's already hidden_channels dim from layer 1
         self.conv2 = HeteroConv({
             ('drug', 'ddi', 'drug'): RGCNConv(
                 hidden_channels,
@@ -140,30 +87,26 @@ class PharmaconHeteroEncoder(nn.Module):
         }, aggr='sum')
 
     def forward(self, x_dict, edge_index_dict, edge_type_dict=None):
-        """
-        x_dict:          {'drug': Tensor[num_drugs, in_dim], 'metabolite': ...,
-                           'protein': ..., 'pathway': ...}
-        edge_index_dict: {('drug','ddi','drug'): LongTensor[2, num_edges], ...}
-        edge_type_dict:  {('drug','ddi','drug'): LongTensor[num_edges]}  -- ONLY
-                         needed for the ddi relation (the only RGCNConv edge type)
+        # x_dict = raw node feats per type, edge_index_dict = edges per type
+        # edge_type_dict only needed for ddi edges (rgcn needs to know which of the 963 rels)
 
-        Returns: dict of final node embeddings, same keys as x_dict,
-                 each shaped [num_nodes_of_that_type, out_channels]
-        """
+        # rgcn needs edge_type as extra arg but sageconv doesn't take it at all
+        # pyg heteroconv only routes it right if the kwarg name ends in _dict
         extra_kwargs = {}
         if edge_type_dict is not None:
             extra_kwargs['edge_type_dict'] = edge_type_dict
 
         x_dict = self.conv1(x_dict, edge_index_dict, **extra_kwargs)
-        x_dict = {key: F.relu(x) for key, x in x_dict.items()}
+        x_dict = {key: F.relu(x) for key, x in x_dict.items()}  # relu so stacking layers actually means smth
 
         x_dict = self.conv2(x_dict, edge_index_dict, **extra_kwargs)
-        # no activation on the final layer -- these are embeddings, not logits
+        # no relu here, this is the final embedding not a logit, dont want to zero stuff out
 
         return x_dict
 
 
 if __name__ == "__main__":
+    # quick smoke test w dummy data just to check shapes work, not real data
     num_drugs, num_metabolites, num_proteins, num_pathways = 645, 557, 500, 50
     num_ddi_relations = 963
 
@@ -212,6 +155,6 @@ if __name__ == "__main__":
 
     out = model(x_dict, edge_index_dict, edge_type_dict)
 
-    print("Forward pass succeeded. Output shapes:")
+    print("fwd pass ok, output shapes:")
     for node_type, emb in out.items():
         print(f"  {node_type}: {emb.shape}")
