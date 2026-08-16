@@ -23,17 +23,15 @@ class SmilesTransformer(nn.Module):
         vocab_size: int,
         pad_id: int,
         d_model: int = 768,
-        num_heads: int = 12,
-        num_layers: int = 12,
+        num_heads: int = 8,
+        num_layers: int = 2,
         d_ff: int = 3072,
         max_len: int = 256,
-        dropout: float = 0.1,
+        dropout: float = 0.3,
     ):
         super().__init__()
 
-        # Embedding
-        
-        self.embedding = SmilesEmbedding(
+        self.embedding = SmilesEmbedding( #creates the embedding
             vocab_size=vocab_size,
             d_model=d_model,
             pad_id=pad_id,
@@ -41,9 +39,8 @@ class SmilesTransformer(nn.Module):
             dropout=dropout,
         )
 
-        # Transformer Encoder
 
-        self.encoder = TransformerEncoder(
+        self.encoder = TransformerEncoder( #creates transformer encoder
             num_layers=num_layers,
             d_model=d_model,
             num_heads=num_heads,
@@ -52,7 +49,6 @@ class SmilesTransformer(nn.Module):
         )
 
         # Final LayerNorm
-
         self.output_norm = nn.LayerNorm(d_model)
 
     def forward(

@@ -8,53 +8,33 @@ from dataset import ParentMetaboliteDataset
 from model import SmilesTransformer
 from pretrain import ParentMetaboliteContrastiveLoss
 
-
-# ============================================================
-# CONFIGURATION
-# ============================================================
-
 TRAIN_CSV = "train.csv"
 VAL_CSV = "val.csv"
 
 MAX_LEN = 256
-
-
-# ============================================================
-# 2-LAYER TRANSFORMER
-# ============================================================
 
 D_MODEL = 768
 NUM_HEADS = 8
 NUM_LAYERS = 2
 D_FF = 3072
 
-
-# ============================================================
-# REGULARIZATION
-# ============================================================
-
 DROPOUT = 0.3
 WEIGHT_DECAY = 1e-4
-
-
-# ============================================================
-# TRAINING
-# ============================================================
 
 TRAIN_BATCH_SIZE = 8
 VAL_BATCH_SIZE = 8
 
 EPOCHS = 26
-LEARNING_RATE = 1e-3
+LEARNING_RATE = 1e-4 #controls how large the optimizer's parameter updates are
 TEMPERATURE = 0.07
 
 # Increased from 5 → 10
-PATIENCE = 10
+PATIENCE = 10 #early stopping(if there's no improvement in validation loss for 10 epochs, stop)
 
-SAVE_DIR = "checkpoints"
+SAVE_DIR = "checkpoints" #saved models and loss history
 
 device = torch.device(
-    "cuda" if torch.cuda.is_available() else "cpu"
+    "cuda" if torch.cuda.is_available() else "cpu" #if CUDA/GPU id available, use it else use CPU
 )
 
 print("Device:", device)
@@ -75,7 +55,7 @@ print("Validation records:", len(val_df))
 # TOKENIZER
 tokenizer = SmilesTokenizer()
 
-train_smiles = (
+train_smiles = (      #collecting both types of SMILES from the training set i.e. parent and metabolites
     train_df["Precursor SMILES"]
     .astype(str)
     .tolist()
@@ -85,7 +65,7 @@ train_smiles = (
     .tolist()
 )
 
-tokenizer.build_vocab(train_smiles)
+tokenizer.build_vocab(train_smiles) #builds vocab
 
 print("Vocabulary size:", tokenizer.vocab_size)
 print("PAD ID:", tokenizer.pad_id)
@@ -105,12 +85,12 @@ val_dataset = ParentMetaboliteDataset(
     max_len=MAX_LEN
 )
 
-# DATALOADERS
+# DATALOADERS (takes the dataset and creates batches of 8 samples)
 train_loader = DataLoader(
     train_dataset,
     batch_size=TRAIN_BATCH_SIZE,
-    shuffle=True,
-    drop_last=True
+    shuffle=True, #randomizes training sampleseach epoch
+    drop_last=True #if the last batch contains fewer than 8 samples, we discard it
 )
 
 val_loader = DataLoader(
@@ -162,7 +142,7 @@ os.makedirs(
     exist_ok=True
 )
 
-best_val_loss = float("inf")
+best_val_loss = float("inf") #initializing best validation loss to infinity so any val loss is better
 epochs_without_improvement = 0
 
 # NEW CHECKPOINT — DOES NOT OVERWRITE THE PREVIOUS RUN
@@ -201,7 +181,7 @@ for epoch in range(EPOCHS):
             "metabolite_attention_mask"
         ].to(device)
 
-        optimizer.zero_grad()
+        optimizer.zero_grad() #clear gradients from previous batch
 
         parent_embedding, _, _ = model(
             parent_ids,
@@ -218,9 +198,9 @@ for epoch in range(EPOCHS):
             metabolite_embedding
         )
 
-        loss.backward()
+        loss.backward() #back propagation(figure out how each model parametre contributed to error)
 
-        optimizer.step()
+        optimizer.step() #update parameters
 
         total_train_loss += loss.item()
 

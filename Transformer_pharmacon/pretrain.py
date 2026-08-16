@@ -14,18 +14,18 @@ class ParentMetaboliteContrastiveLoss(nn.Module):
         Parent[i] <-> Metabolite[j], where i != j
     """
 
-    def __init__(self, temperature=0.07):
+    def __init__(self, temperature=0.07): #temparature controls how sharply the similarity scores are distributed
         super().__init__()
 
-        self.temperature = temperature
+        self.temperature = temperature #lower temparature makes similarity distribution sharper
 
     def forward(self, parent_embeddings, metabolite_embeddings):
 
-        # Normalize embeddings
-        parent_embeddings = F.normalize(
+        # Normalize embeddings (performs L2 normalization)
+        parent_embeddings = F.normalize( 
             parent_embeddings,
             p=2,
-            dim=-1,
+            dim=-1, #normalize across teh embedding dimension
         )
 
         metabolite_embeddings = F.normalize(
@@ -55,19 +55,19 @@ class ParentMetaboliteContrastiveLoss(nn.Module):
         )
 
         # Parent -> Metabolite
-        loss_parent_to_metabolite = F.cross_entropy(
-            similarity,
+        loss_parent_to_metabolite = F.cross_entropy(  #for every parent we ask which metabolite in this batch is the correct one?
+            similarity,                               #the model is rewarded when the diagonal similarity is high relative to other values
             labels,
         )
 
         # Metabolite -> Parent
-        loss_metabolite_to_parent = F.cross_entropy(
+        loss_metabolite_to_parent = F.cross_entropy(  #now we ask, given this metabolite which is the correct parent
             similarity.T,
             labels,
         )
 
-        # Symmetric contrastive loss
-        loss = (
+        # Symmetric contrastive loss (since we do parent->metabolite and metabolite->parent, we have symmetric contrastive loss)
+        loss = (              
             loss_parent_to_metabolite
             + loss_metabolite_to_parent
         ) / 2

@@ -12,14 +12,14 @@ def rotate_half(x):
     [-x1, x0, -x3, x2]
     """
 
-    x = x.view(*x.shape[:-1], -1, 2)
+    x = x.view(*x.shape[:-1], -1, 2) # groups into pairs, so for 96 dimension 48 pairs of 2
 
-    x1 = x[..., 0]
+    x1 = x[..., 0] #define variables x1 and x2 that loads each pair
     x2 = x[..., 1]
 
-    x = torch.stack((-x2, x1), dim=-1)
+    x = torch.stack((-x2, x1), dim=-1) #rotates the pair (x0,x1)->(-x1,x0)
 
-    return x.flatten(-2)
+    return x.flatten(-2) #merge the rotated pairs back to 96 features
 
 
 def apply_rotary_pos_emb(q, k, cos, sin):
@@ -32,7 +32,7 @@ def apply_rotary_pos_emb(q, k, cos, sin):
     cos, sin:
         (1, 1, L, D)
     """
-
+    #Take Q/K, rotate its feature pairs, and combine that rotation with position-dependent sine/cosine values.
     q = (q * cos) + (rotate_half(q) * sin)
     k = (k * cos) + (rotate_half(k) * sin)
 
@@ -60,7 +60,7 @@ class RotaryEmbedding(nn.Module):
             base
             ** (
                 torch.arange(
-                    0,
+                    0,  #torch.arrange (0, dim, 2) gives 0,2,4...94, so we get 48 values cause we're working with pairs
                     dim,
                     2,
                     dtype=torch.float32,
@@ -75,48 +75,48 @@ class RotaryEmbedding(nn.Module):
             persistent=False,
         )
 
-        self._build_cache(
+        self._build_cache(          #builds initial cache and precomputes the sine and cosine values
             max_position_embeddings,
             device="cpu",
             dtype=torch.float32,
         )
 
-    def _build_cache(
+    def _build_cache(  #this function generates the positional information for a particular sequence length
         self,
         seq_len,
         device,
         dtype,
     ):
 
-        self.max_seq_len_cached = seq_len
+        self.max_seq_len_cached = seq_len #stores current cache size
 
-        positions = torch.arange(
+        positions = torch.arange(   #generates token positions, if seq_len=5 then positions=[0,1,2,3,4]
             seq_len,
             device=device,
             dtype=self.inv_freq.dtype,
         )
 
-        freqs = torch.outer(
+        freqs = torch.outer(   #combines token positions+rotary frequencies so position x frequency
             positions,
             self.inv_freq,
         )
 
-        emb = torch.repeat_interleave(
+        emb = torch.repeat_interleave(  #since we originally calculated 48 frequency values, this duplicates each one so that we haev 96 values for 96 features
             freqs,
             repeats=2,
             dim=-1,
         )
-
-        cos = emb.cos()[None, None, :, :]
+        #generate position dependent sine and cosine values with resulting shape (1,1,L,96) so we can broadcastover batches and heads and dont have to create separate copies for batch/head
+        cos = emb.cos()[None, None, :, :] 
         sin = emb.sin()[None, None, :, :]
 
-        self.register_buffer(
+        self.register_buffer(     #store cos values
             "cos_cached",
             cos.to(dtype),
             persistent=False,
         )
 
-        self.register_buffer(
+        self.register_buffer(     #store sin values
             "sin_cached",
             sin.to(dtype),
             persistent=False,
@@ -131,8 +131,8 @@ class RotaryEmbedding(nn.Module):
         seq_len = q.size(-2)
 
         if (
-            seq_len > self.max_seq_len_cached
-            or self.cos_cached.device != q.device
+            seq_len > self.max_seq_len_cached #if SMILES string is greater than max_seq_length, rebuild cache
+            or self.cos_cached.device != q.device #if cache and Q are not at the same place CPU/GPU, rebuild or move appropriately
         ):
 
             self._build_cache(
@@ -141,7 +141,7 @@ class RotaryEmbedding(nn.Module):
                 dtype=q.dtype,
             )
 
-        cos = self.cos_cached[:, :, :seq_len].to(
+        cos = self.cos_cached[:, :, :seq_len].to(  #take only the required positions, if your SMILES is 40 tokens but cache has 512 positions we slice positions 0->39
             device=q.device,
             dtype=q.dtype,
         )
