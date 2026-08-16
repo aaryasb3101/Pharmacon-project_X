@@ -69,7 +69,7 @@ class RotaryEmbedding(nn.Module):
             )
         )
 
-        self.register_buffer(
+        self.register_buffer( #we use buffers to tell pytorch that these tensors are part of model but not trainable, they are fixed values
             "inv_freq",
             inv_freq,
             persistent=False,
