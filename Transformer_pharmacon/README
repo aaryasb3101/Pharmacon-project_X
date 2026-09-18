@@ -1,0 +1,204 @@
+"""
+attention.py
+============
+
+Multi-Head Self-Attention
+
+This module allows every token in a SMILES sequence to attend to every
+other token, enabling the model to learn relationships between atoms
+and molecular substructures.
+
+Pipeline:
+
+Input Embeddings
+        │
+        ▼
+Linear Projections (Q, K, V)
+        │
+        ▼
+Split into Multiple Heads
+        │
+        ▼
+Scaled Dot-Product Attention
+        │
+        ▼
+Concatenate Heads
+        │
+        ▼
+Final Linear Projection
+"""
+
+"""
+embedding.py
+============
+
+SMILES Embedding Layer
+
+Converts token IDs into dense vector representations and adds
+positional information before passing them to the transformer.
+
+Pipeline:
+    Token IDs
+        ↓
+    Token Embedding
+        ↓
+    Scale by √d_model
+        ↓
+    Positional Encoding
+        ↓
+    Dropout
+"""
+
+"""
+encoder_layer.py
+================
+
+Single Transformer Encoder Block
+
+Architecture:
+
+Input
+  │
+  ▼
+Multi-Head Self-Attention
+  │
+Add (Residual)
+  │
+Layer Normalization
+  │
+Feed Forward Network
+  │
+Add (Residual)
+  │
+Layer Normalization
+  │
+Output
+"""
+
+"""
+encoder.py
+==========
+
+Transformer Encoder
+
+Stacks multiple Transformer Encoder Layers to progressively refine
+the token representations.
+
+Architecture:
+
+Input Embeddings
+        │
+        ▼
+Encoder Layer 1
+        │
+        ▼
+Encoder Layer 2
+        │
+        ▼
+Encoder Layer 3
+        │
+        ▼
+Encoder Layer 4
+        │
+        ▼
+Output Token Embeddings
+"""
+
+"""
+feed_forward.py
+===============
+
+Position-wise Feed Forward Network
+
+Applies a two-layer fully connected network independently
+to every token embedding.
+
+Pipeline:
+    Input
+      ↓
+Linear (d_model → d_ff)
+      ↓
+GELU
+      ↓
+Dropout
+      ↓
+Linear (d_ff → d_model)
+"""
+
+"""
+model.py
+========
+
+SMILES Transformer Model
+
+Encodes a tokenized SMILES sequence into a fixed-size molecular
+embedding using a custom Transformer encoder.
+
+Pipeline:
+
+Input IDs
+      │
+      ▼
+Embedding Layer
+      │
+      ▼
+Transformer Encoder
+      │
+      ▼
+Final Layer Normalization
+      │
+      ▼
+CLS Token Pooling
+      │
+      ▼
+Molecular Embedding
+"""
+"""
+positional_encoding.py
+======================
+
+Sinusoidal Positional Encoding
+
+Transformers process all tokens simultaneously and therefore have
+no inherent understanding of token order. Positional encoding adds
+unique position information to each token embedding.
+
+Pipeline:
+    Token Embeddings
+          +
+    Positional Encoding
+          ↓
+    Position-Aware Embeddings
+"""
+"""
+test.py
+========
+
+Simple test script for the custom SMILES Transformer.
+
+Checks:
+    ✓ Tokenizer
+    ✓ Embedding layer
+    ✓ Transformer encoder
+    ✓ Output shapes
+"""
+
+"""
+tokenizer.py
+============
+
+SMILES Tokenizer for Molecular Transformer
+
+This module converts SMILES strings into token IDs that can be
+processed by the transformer.
+
+Pipeline:
+    SMILES
+        ↓
+    Regex Tokenization
+        ↓
+    Vocabulary Mapping
+        ↓
+    Token IDs
+"""
+

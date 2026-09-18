@@ -1,0 +1,21 @@
+#python cache
+__pycache__/
+*.pyc 
+*.pyo 
+
+#Model checkpoints
+checkpoints/
+*.pt 
+*.pth 
+
+#datasets
+*.csv 
+*.xlsx
+*.zip
+
+#generated graphs
+graphs/
+*.png
+
+dont need for now/
+
